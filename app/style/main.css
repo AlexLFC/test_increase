@@ -66,6 +66,8 @@ body {
   text-align: center;
   padding-top: 21px;
   padding-bottom: 3.57143rem; }
+  .header__cont__form .form-inline {
+    margin-bottom: 10px; }
 
 .header__form__name {
   color: #ffffff;
@@ -104,5 +106,11 @@ body {
   font-family: "Calibri";
   font-size: 16px;
   font-weight: 700; }
+
+.form__info {
+  width: 400px;
+  height: 30px;
+  margin: 0 auto;
+  color: #C00000; }
 
 /*# sourceMappingURL=main.css.map */

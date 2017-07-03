@@ -55,6 +55,9 @@
   text-align: center;
   padding-top: 21px;
   padding-bottom: rem(50px);
+  .form-inline{
+    margin-bottom: 10px;
+  }
 }
 
 .header__form__name{
@@ -90,4 +93,11 @@
   font-family: $secFontFamily;
   font-size: 16px;
   font-weight: 700;
+}
+
+.form__info{
+  width: 400px;
+  height: 30px;
+  margin: 0 auto;
+  color: $colorError;
 }
