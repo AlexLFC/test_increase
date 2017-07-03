@@ -1,0 +1,93 @@
+.header__wrapper{
+  position: relative;
+}
+.header__img{
+  width: 100%;
+  height: auto;
+}
+
+
+.header__cont__text{
+  text-align: center;
+  width: 380px;
+  padding-bottom: 50px;
+  position: absolute;
+  top: 45px;
+  right: 76px;
+  //border-radius: 120px 104px 138px 144px;
+  //background: $secondColor;
+  background: url("../img/circle.png") no-repeat;
+  //background-size: cover;
+}
+.header__main-text{
+  color: $mainTextColorL;
+  font-size: 50px;
+  padding-top: 18px;
+  font-family: $mailFontFamily;
+  .header__main-text_class{
+    font-size: 38px;
+    padding-top: 10px;
+    line-height: 25px;
+    display: block;
+  }
+  .header__main-text_name{
+    font-size: 38px;
+    color: $colorName;
+    display: block;
+  }
+}
+
+.header__text-stock{
+  color: $mainTextColorL;
+  font-size: 24px;
+  margin-top: -6px;
+  line-height: 23px;
+  font-family: $secFontFamily;
+}
+
+
+.header__cont__form{
+  position: absolute;
+  top: 347px;
+  right: 116px;
+  width: 591px;
+  background: url("../img/rectangle.png") no-repeat;
+  text-align: center;
+  padding-top: 21px;
+  padding-bottom: rem(50px);
+}
+
+.header__form__name{
+  color: $mainTextColorL;
+  font-size: 23px;
+  margin-bottom: 17px;
+  font-family: $secFontFamily;
+}
+
+.header__form__input{
+  width: 210px;
+  height: 40px;
+  padding-left: 14px;
+  line-height: 40px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 22px;
+  &::-webkit-input-placeholder {color:#000000;}
+  &::-moz-placeholder          {color:#000000;}/* Firefox 19+ */
+  &:-moz-placeholder           {color:#000000;}/* Firefox 18- */
+  &:-ms-input-placeholder      {color:#000000;}
+}
+
+.header__form__btn{
+  border-radius: 6px;
+  background: $btnFormColor;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+  width: 223px;
+  height: 40px;
+  line-height: 40px;
+  color: $mainTextColorL;
+  border: none;
+  font-family: $secFontFamily;
+  font-size: 16px;
+  font-weight: 700;
+}

@@ -1,7 +1,6 @@
 @import "mixin";
+@import "fonts";
+@import "var";
 
-body{
-  background: red;
-}
-
-
+@import "include/bodyAndMain";
+@import "include/header";
