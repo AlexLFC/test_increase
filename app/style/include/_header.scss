@@ -1,5 +1,6 @@
 .header__wrapper{
   position: relative;
+  margin-bottom: 144px;
 }
 .header__img{
   width: 100%;
@@ -14,10 +15,8 @@
   position: absolute;
   top: 45px;
   right: 76px;
-  //border-radius: 120px 104px 138px 144px;
-  //background: $secondColor;
   background: url("../img/circle.png") no-repeat;
-  //background-size: cover;
+
 }
 .header__main-text{
   color: $mainTextColorL;

@@ -1,0 +1,42 @@
+.benefits__block{
+  padding: 14px;
+  text-align: center;
+}
+
+.benefits__list{
+  list-style: none;
+  li{
+    display: block;
+  }
+}
+
+.benefits__item__img{
+  height: 116px;
+}
+.benefits__item__img_1{
+  background: url("../img/icon.png") no-repeat center -2px;
+}
+.benefits__item__img_2{
+  background: url("../img/icon.png") no-repeat center -115px;
+}
+.benefits__item__img_3{
+  background: url("../img/icon.png") no-repeat center -266px;
+}
+.benefits__item__img_4{
+  background: url("../img/icon.png") no-repeat center -390px;
+}
+
+.benefits__item__name{
+  font-size: 16px;
+  font-family: $secFontFamily;
+  color: $secondColor;
+  margin-bottom: 16px;
+  line-height: 19px;
+}
+.benefits__item__description{
+  font-size: 14px;
+  font-family: $secFontFamily;
+  color: $colorTextBenefits;
+  margin-bottom: 25px;
+  line-height: 18px;
+}
