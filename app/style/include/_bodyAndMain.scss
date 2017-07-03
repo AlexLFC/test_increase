@@ -1,10 +1,15 @@
 body{
   background: url("../img/BGbody.png");
+  font-size: 14px;
 }
 
 .main-container{
-  margin: rem(86px) rem(25px);
-  //margin: 86px 25px;
+  margin-top: 86px;
   background: $mainContainerBG;
   box-shadow: 0 4px 25.81px 3.19px rgba(0, 0, 0, 0.24);
+}
+.custom-container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 86px;
 }

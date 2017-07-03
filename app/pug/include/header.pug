@@ -1,25 +1,26 @@
 header.row
     .col-xs-12
         .header__wrapper
-            .header__block-img
-                img(src="img/HeaderIMG1.jpg" alt="Подгузники премиум класса Pampers Premium Care" class="header__img")
-            .heder__cont
-                .header__cont__text
-                    h1.header__main-text
-                        | Подгузники
-                        | <span class="header__main-text_class">премиум класса</span>
-                        | <span class="header__main-text_name">Pampers Premium <br/>Care</span>
-                    h2.header__text-stock
-                        | Закажите 2 подгузников <br/>
-                        | Pampers Premium и получите <br/>
-                        | карту лояльности в подарок
-                .header__cont__form
-                    form#sendPhone.form-inline
-                        .form-group
-                            h3.header__form__name
-                                label(for="userPhone")
-                                    | Оставьте Ваши данные и узнайте больше об акции!
-                            input(type="text" id="userPhone" class="header__form__input" name="userPhone" placeholder="Телефон")
-                            button(type="submit" class="header__form__btn")
-                                |оставить заявку
-                    .form__info.js_form__info
+            .custom-container
+                .row
+                    .col-md-offset-4.col-md-8
+                        .heder__cont
+                            .header__cont__text
+                                h1.header__main-text
+                                    | Подгузники
+                                    | <span class="header__main-text_class">премиум класса</span>
+                                    | <span class="header__main-text_name">Pampers Premium <br/>Care</span>
+                                h2.header__text-stock
+                                    | Закажите 2 подгузников <br/>
+                                    | Pampers Premium и получите <br/>
+                                    | карту лояльности в подарок
+                            .header__cont__form
+                                form#sendPhone.form-inline
+                                    .form-group
+                                        h3.header__form__name
+                                            label(for="userPhone")
+                                                | Оставьте Ваши данные и узнайте больше об акции!
+                                        input(type="text" id="userPhone" class="header__form__input" name="userPhone" placeholder="Телефон")
+                                        button(type="submit" class="header__form__btn")
+                                            | оставить заявку
+                                .form__info.js_form__info
