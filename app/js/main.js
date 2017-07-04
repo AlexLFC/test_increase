@@ -104,4 +104,50 @@ function readeDocumentForm() {
             }
         };
     };
+    // ************************************************************
+    // ********Отправка писем с формы
+    // ************************************************************
+    /**
+     * Для перемещения названия продукта в форму.
+     */
+    var $buttonProduct = $('.js_bild_modal');
+    var $selectedProduct ={};
+    var nameProduct = "";
+    var $inputProduct = $("#nameProduct");
+
+    $buttonProduct.on("click", function () {
+        $selectedProduct = $(this).parents(".js_product__item");
+        nameProduct = $selectedProduct.find(".js_product__item__name").text();
+        $inputProduct.val(nameProduct);
+
+        nameProduct="";
+        $selectedProduct={};
+    });
+
+    /**
+     * Для перемещения названия продукта в форму.
+     */
+
+    var $formPrice = $("#findPrice");
+    var URLPHPfindPrice = "php/getMailFromFindPrice.php";
+
+    $formPrice.on("submit", function (e) {
+        e.preventDefault();
+        var form = document.forms.findPrice;
+        var formData = new FormData(form);
+        console.log(formData);
+        $.ajax({
+            type: "POST",
+            url: URLPHPfindPrice,
+            processData: false,
+            contentType: false,
+            data: formData
+            // success: requestSuccess,
+            // error: requestError
+        });
+
+    })
+
+
+
 };

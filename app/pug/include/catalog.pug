@@ -30,12 +30,12 @@
 
                                 each item, key in list_product__item_1
                                     .col-md-3
-                                        .product__item
+                                        .product__item.js_product__item
                                             .product__item__img
                                                 img(src= item alt= key)
                                             .product__item__name
-                                                p.product__item__name-text= key
-                                            button.product__item__btn
+                                                p.product__item__name-text.js_product__item__name= key
+                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
                                                 | Узнать цену
                             .item
                                 -
@@ -56,7 +56,7 @@
                                                 img(src= item alt= key)
                                             .product__item__name
                                                 p.product__item__name-text= key
-                                            button.product__item__btn
+                                            button.product__item__btn(data-toggle='modal', data-target='#myModal')
                                                 | Узнать цену
                             .item
                                 -
@@ -78,7 +78,7 @@
                                                 img(src= item alt= key)
                                             .product__item__name
                                                 p.product__item__name-text= key
-                                            button.product__item__btn
+                                            button.product__item__btn(data-toggle='modal', data-target='#myModal')
                                                 | Узнать цену
 
                     //a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')

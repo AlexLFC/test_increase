@@ -1,0 +1,22 @@
+// Modal
+#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                h4#myModalLabel.modal-title Modal title
+            .modal-body
+                form#findPrice
+                    .form-group
+                        label(for='userNamePrice') Ваше имя
+                        input.form-control#userNamePrice(type='text', placeholder='Ваше имя...' name="userNamePrice")
+                    .form-group
+                        label(for='userPhonePrice') Номер телефона
+                        input.form-control#userPhonePrice(type='text', placeholder='Номер телефона' name="userPhonePrice")
+                    .form-group
+                        input#nameProduct(type='text' name="nameProduct")
+                    button.btn.btn-default(type='submit') Submit
+            .modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+                button.btn.btn-primary(type='button') Save changes
