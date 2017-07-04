@@ -1,0 +1,26 @@
+.reviews__name{
+  color: $colorReviewsName;
+  font-size: 45px;
+  font-family: $mailFontFamily;
+}
+.reviews__item__text{
+  font-size: 16px;
+  font-family: $secFontFamily;
+  color: $colorReviewsName;
+  font-style: italic;
+  text-align: left;
+}
+.reviews__item__name{
+  font-size: 20px;
+  font-family: $secFontFamily;
+  color: $secondColor;
+  text-align: right;
+}
+.reviews__item__kinship{
+  font-size: 14px;
+  font-family: $secFontFamily;
+  color: $colorReviewsName;
+  text-align: right;
+}
+
+
