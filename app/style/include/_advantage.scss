@@ -1,0 +1,27 @@
+.advantage__name{
+  color: $colorReviewsName;
+  font-size: 24px;
+  font-family: $mailFontFamily;
+  margin-bottom: 60px;
+}
+.advantage__block__img{
+  img{
+    margin-bottom: 35px;
+  }
+}
+.advantage__block__text{
+  list-style: none;
+  padding-top: 40px;
+}
+.advantage__text__item{
+  font-size: 16px;
+  font-family: $secFontFamily;
+  color: $advantageTextColor;
+  padding-top: 10px;
+  padding-left: 35px;
+  margin-bottom: 23px;
+  background: url("../img/advlist.png") no-repeat;
+}
+.advantage__item__name{
+  font-weight: 700;
+}

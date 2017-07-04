@@ -284,4 +284,29 @@ body {
   color: #737373;
   text-align: right; }
 
+.advantage__name {
+  color: #737373;
+  font-size: 24px;
+  font-family: "HelveticaNeueCyr-Medium";
+  margin-bottom: 60px; }
+
+.advantage__block__img img {
+  margin-bottom: 35px; }
+
+.advantage__block__text {
+  list-style: none;
+  padding-top: 40px; }
+
+.advantage__text__item {
+  font-size: 16px;
+  font-family: "Calibri";
+  color: #484848;
+  padding-top: 10px;
+  padding-left: 35px;
+  margin-bottom: 23px;
+  background: url("../img/advlist.png") no-repeat; }
+
+.advantage__item__name {
+  font-weight: 700; }
+
 /*# sourceMappingURL=main.css.map */
