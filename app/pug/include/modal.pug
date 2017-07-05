@@ -5,15 +5,13 @@
             .modal-header
                 button.close(type='button', data-dismiss='modal', aria-label='Close')
                     span(aria-hidden='true') ×
-                h4#myModalLabel.modal-title Оставьте Ваши данные и узнайте цену на продукт!
+                h4#myModalLabel.modal-title Оставьте Ваши контактные данные для уточнения стоимости и условий акции
             .modal-body
                 form#findPrice
                     .form-group
-                        label(for='userNamePrice') Ваше имя
-                        input.form-control.modal__form__input#userNamePrice(type='text', placeholder='Ваше имя...' name="userNamePrice")
-                    .form-group
                         label(for='userPhonePrice') Номер телефона
                         input.form-control.modal__form__input#userPhonePrice(type='text', placeholder='Номер телефона' name="userPhonePrice")
-                    .form-group
+                    .form-group.modal__form__nameProduct
                         input#nameProduct.modal__form__nameProduct(type='text' name="nameProduct")
+                    .form__findPrice__info
                     button.modal__form__btn(type='submit') оставить заявку

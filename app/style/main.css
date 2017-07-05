@@ -336,6 +336,8 @@ body {
   color: #ffffff;
   margin-top: 10px; }
 
+.modal__findPrice .modal-dialog {
+  width: 450px; }
 .modal__findPrice .modal-content {
   border: 5px solid #8bd7fa;
   border-radius: 120px 104px 138px 144px;
@@ -344,7 +346,10 @@ body {
   border-bottom: none;
   color: #484848;
   font-size: 24px;
-  font-family: "Calibri"; }
+  font-family: "Calibri";
+  text-align: center; }
+  .modal__findPrice .modal-header .modal-title {
+    padding-top: 36px; }
   .modal__findPrice .modal-header .close {
     width: 25px;
     height: 25px;
@@ -387,6 +392,13 @@ body {
   display: block; }
 
 .modal__form__nameProduct {
-  opacity: 0; }
+  opacity: 0;
+  margin-bottom: -36px; }
+
+.form__findPrice__info {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  color: #C00000; }
 
 /*# sourceMappingURL=main.css.map */

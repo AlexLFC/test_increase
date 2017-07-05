@@ -107,47 +107,125 @@ function readeDocumentForm() {
     // ************************************************************
     // ********Отправка писем с формы
     // ************************************************************
-    /**
-     * Для перемещения названия продукта в форму.
-     */
-    var $buttonProduct = $('.js_bild_modal');
-    var $selectedProduct ={};
-    var nameProduct = "";
-    var $inputProduct = $("#nameProduct");
 
-    $buttonProduct.on("click", function () {
-        $selectedProduct = $(this).parents(".js_product__item");
-        nameProduct = $selectedProduct.find(".js_product__item__name").text();
-        $inputProduct.val(nameProduct);
+    if($("#findPrice")){
+        /**
+         * Для перемещения названия продукта в форму.
+         */
+        var $buttonProduct = $('.js_bild_modal');
+        var $selectedProduct ={};
+        var nameProduct = "";
+        var $inputProduct = $("#nameProduct");
 
-        nameProduct="";
-        $selectedProduct={};
-    });
-
-    /**
-     * Для перемещения названия продукта в форму.
-     */
-
-    var $formPrice = $("#findPrice");
-    var URLPHPfindPrice = "php/getMailFromFindPrice.php";
-
-    $formPrice.on("submit", function (e) {
-        e.preventDefault();
-        var form = document.forms.findPrice;
-        var formData = new FormData(form);
-        console.log(formData);
-        $.ajax({
-            type: "POST",
-            url: URLPHPfindPrice,
-            processData: false,
-            contentType: false,
-            data: formData
-            // success: requestSuccess,
-            // error: requestError
+        $buttonProduct.on("click", function () {
+            $selectedProduct = $(this).parents(".js_product__item");
+            nameProduct = $selectedProduct.find(".js_product__item__name").text();
+            $inputProduct.val(nameProduct);
+            nameProduct="";
+            $selectedProduct={};
         });
 
-    })
+        /**
+         * Функция для отправки письма на сервер.
+         *
+         * $formPrice - jquery элемент по id формы.
+         * $formFindPriceInfo - jquery элемент Блок для вывода информации
+         * URLPHPfindPrice - Путь до php файла.
+         * messages -Сообщение о результатах отправки письма
+         */
+
+        var $formPrice = $("#findPrice");
+        var URLPHPfindPrice = "php/getMailFromFindPrice.php";
+        var $formFindPriceInfo = $(".form__findPrice__info");
+        var $userPhonePrice = $("#userPhonePrice");
+        var messagesPrice= {
+            error : "Введите номер!",
+            incorrect : "Неверно введен номер!",
+            successfull : "Ваша заявка принята, с Вами скоро свяжутся!",
+            errorServer: "Что-то пошло не так! Попробуйте снова.",
+            fullErrorServer: 'Произошла ошибка...'
+        };
+        var flagPrice = true;
+        var validPrice = false;
+
+        /**
+         * Функция для обработки ответа с сервера.
+         *
+         * error - $formPhone - Значение не получено.
+         * incorrect -  Номер неверный.
+         * successfull - Письмо отправлено.
+         * errorServer - Ошибка на сервере.
+         */
+        function requestSuccessPrice(data) {
+            if(data==="error"){
+                $formFindPriceInfo.text(messagesPrice.error);
+            } else if (data==="incorrect"){
+                $formFindPriceInfo.text(messagesPrice.incorrect);
+            } else if (data==="successfull"){
+                $formFindPriceInfo.text(messagesPrice.successfull);
+                $userPhone.val("");
+            }else {
+                $formInfo.text(messagesPrice.errorServer);
+            };
+        };
 
 
+        /**
+         * Функция для обработок ошибок.
+         */
+        function requestErrorPrice(xhr, str) {
+            $formFindPriceInfo.text(messagesPrice.fullErrorServer);
+        };
 
+
+        $formPrice.on("submit", function (e) {
+            e.preventDefault();
+            if(flagPrice){
+                flagPrice = false;
+                customValidationPrice();
+                if(validPrice){
+                    var form = document.forms.findPrice;
+                    var formData = new FormData(form);
+                    console.log(formData);
+                    $.ajax({
+                        type: "POST",
+                        url: URLPHPfindPrice,
+                        processData: false,
+                        contentType: false,
+                        data: formData,
+                        success: requestSuccessPrice,
+                        error: requestErrorPrice
+                    });
+                }
+            }
+        });
+
+        //Снятие блокировки при корректировки значения
+        $userPhonePrice.on("focus", function () {
+            flagPrice = true;
+            validPrice = false;
+            $formFindPriceInfo.text("");
+            return [flagPrice, validPrice];
+        });
+        /**
+         * Функция для валидация формы.
+         */
+        function customValidationPrice() {
+            var phone = $userPhonePrice.val();
+            var regexp = /^((8|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+
+            if(phone === ""){
+                $formFindPriceInfo.text(messagesPrice.error);
+                console.log(messagesPrice.error);
+            } else {
+                if(!regexp.test(phone)){
+                    $formFindPriceInfo.text(messagesPrice.incorrect);
+                    console.log(messagesPrice.incorrect);
+                } else {
+                    validPrice = true;
+                    return validPrice;
+                }
+            }
+        };
+    };
 };

@@ -1,19 +1,16 @@
 <?php
 //Проверка на пустую форму
-if((isset($_POST['userNamePrice'])&&$_POST['userNamePrice']!="")){
+if((isset($_POST['userPhonePrice'])&&$_POST['userPhonePrice']!="")){
     require_once ("PHPMailer-master/PHPMailerAutoload.php");
-    $userNamePrice = $_POST['userNamePrice'];
     $userPhonePrice = $_POST['userPhonePrice'];
     $nameProduct = $_POST['nameProduct'];
     $emailSite = "giz@giz.by";
     $addressServer = "test@test.by";
 
 //    Удаляет пробелы (или другие символы) из начала и конца строки
-    $userNamePrice = trim($userNamePrice);
     $userPhonePrice = trim($userPhonePrice);
-    $userNamePrice = trim($userNamePrice);
+    $nameProduct = trim($nameProduct);
 ////    Удаляет HTML и PHP-теги из строки
-    $userNamePrice = strip_tags($userNamePrice);
     $userPhonePrice = strip_tags($userPhonePrice);
     $nameProduct = strip_tags($nameProduct);
 //
@@ -25,7 +22,6 @@ if((isset($_POST['userNamePrice'])&&$_POST['userNamePrice']!="")){
 
         //Формирование текста письма
         $bodyHtml = '
-            <p>Имя:'.$userNamePrice.'</p>
             <p>Телефон: '.$userPhonePrice.'</p>
             <p>Название: '.$nameProduct.'</p>
             ';
@@ -36,7 +32,7 @@ if((isset($_POST['userNamePrice'])&&$_POST['userNamePrice']!="")){
 
         $mail->Subject = "Тема";
         $mail->Body = $bodyHtml;
-        $mail->AltBody='Номер телефона: '.$userPhonePrice.' Имя '.$userNamePrice.' Название '.$nameProduct.'';//запостной текст
+        $mail->AltBody='Номер телефона: '.$userPhonePrice.' Название '.$nameProduct.'';//запостной текст
 
         if(!$mail->send()) {
             echo 'Message could not be sent.';

@@ -549,7 +549,7 @@
           <div class="custom-container">
             <div class="row text-center">
               <div class="col-xs-12">
-                <h3 class="reviews__name">Отзывы</h3>
+                <h3 class="reviews__name">Отзывы с Onliner.by</h3>
               </div>
             </div>
             <!--.row.text-center-->
@@ -715,21 +715,18 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title" id="myModalLabel">Оставьте Ваши данные и узнайте цену на продукт!</h4>
+                <h4 class="modal-title" id="myModalLabel">Оставьте Ваши контактные данные для уточнения стоимости и условий акции</h4>
               </div>
               <div class="modal-body">
                 <form id="findPrice">
                   <div class="form-group">
-                    <label for="userNamePrice">Ваше имя</label>
-                    <input class="form-control modal__form__input" id="userNamePrice" type="text" placeholder="Ваше имя..." name="userNamePrice">
-                  </div>
-                  <div class="form-group">
                     <label for="userPhonePrice">Номер телефона</label>
                     <input class="form-control modal__form__input" id="userPhonePrice" type="text" placeholder="Номер телефона" name="userPhonePrice">
                   </div>
-                  <div class="form-group">
+                  <div class="form-group modal__form__nameProduct">
                     <input class="modal__form__nameProduct" id="nameProduct" type="text" name="nameProduct">
                   </div>
+                  <div class="form__findPrice__info"></div>
                   <button class="modal__form__btn" type="submit">оставить заявку</button>
                 </form>
               </div>
