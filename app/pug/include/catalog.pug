@@ -14,6 +14,13 @@
                             li.active(data-target='#myCarousel', data-slide-to='0')
                             li(data-target='#myCarousel', data-slide-to='1')
                             li(data-target='#myCarousel', data-slide-to='2')
+                            li(data-target='#myCarousel', data-slide-to='3')
+                            li(data-target='#myCarousel', data-slide-to='4')
+                            li(data-target='#myCarousel', data-slide-to='5')
+                            li(data-target='#myCarousel', data-slide-to='6')
+                            li(data-target='#myCarousel', data-slide-to='7')
+                            li(data-target='#myCarousel', data-slide-to='8')
+                            li(data-target='#myCarousel', data-slide-to='9')
                         .carousel-inner(role='listbox')
                             .item.active
                                 -
@@ -80,164 +87,185 @@
                                                 p.product__item__name-text.js_product__item__name= key
                                             button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
                                                 | Узнать цену
+                            .item
+                                -
+                                    var list_product__item_4 = {
+                                    "Подгузники Pampers Active Baby-dry (Maxi), 70 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/549/178_157_1/549848a0ab4984f627be8e9e6d9764fb.jpg?142503115714671",
+                                    "Подгузники Pampers Active Baby-Dry 6 (Extra Large), 54 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/9b4/178_157_1/pampers6_54.jpg?144912862314228",
+                                    "Подгузники Pampers Premium Care 5 (Junior), 44 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/760/178_157_1/dsca_0162.jpg?142503106112468",
+                                    "Подгузники Pampers Premium Care 4 (Maxi), 52 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/883/178_157_1/883b5f7ed3bb5796f14ce7f7ec0f67ca.jpg?14250310666825",
+                                    "Подгузники Pampers Active Baby-Dry 4+ (Maxi Plus), 70 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/5a7/178_157_1/res_547e91e81083e566d50c8ff988273562_350x350c_6k6n.jpg?144464048512127",
+                                    "Подгузники Pampers Active Baby-dry 4 (Maxi), 76 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/5d9/178_157_1/screenshot_8.jpg?144361778710318",
+                                    "Подгузники Pampers Active Baby-Dry 3 (Midi), 90 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/3cb/178_157_1/shottype1_328x328.jpg?144308778214975",
+                                    "Подгузники Pampers Active Baby-dry 5 (Junior), 64 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/f8d/178_157_1/screenshot_1.jpg?14436156338166"
+                                    }
 
-                    //a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
-                    //    span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-                    //    span.sr-only Previous
-                    //a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
-                    //    span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-                    //    span.sr-only Next
+                                each item, key in list_product__item_4
+                                    .col-md-3.col-sm-6.col-xs-12
+                                        .product__item.js_product__item
+                                            .product__item__img
+                                                img(src= item alt= key)
+                                            .product__item__name
+                                                p.product__item__name-text.js_product__item__name= key
+                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
+                                                | Узнать цену
+                            .item
+
+                                -
+                                    var list_product__item_5 = {
+                                    "Подгузники Pampers Active Baby-Dry 6 (Extra Large), 56 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ff7/178_157_1/1111.jpg?14491286239321",
+                                    "Трусики для мальчиков и девочек Pampers Pants 6 (Extra Large), 44 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/a2b/178_157_1/screenshot_1.png?143074189924166",
+                                    "Подгузники Pampers Sleep&Play Junior 5 (11-18 кг) 74 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/9a2/178_157_1/9a2363e09b25b3026052123fada59461.jpg?142503106113272",
+                                    "Трусики для мальчиков и девочек Pampers Pants 3 (Midi), 60 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/57f/178_157_1/screenshot_4.png?143039322428385",
+                                    "Подгузники Pampers Premium Care 1 (Newborn), 88 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0fd/178_157_1/29518.jpg?147213590114451",
+                                    "Подгузники Pampers Sleep&Play 3 (Midi), 100 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/117/178_157_1/dsca_0075.jpg?142503102013937",
+                                    "Подгузники Pampers Sleep&Play Maxi 4 (8-14 кг) 86 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/473/178_157_1/dsca_0087.jpg?142503101913970",
+                                    "Трусики для мальчиков и девочек Pampers Pants 5 (Junior), 48 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1b7/178_157_1/screenshot_6.png?143039223528743"
+                                    }
+
+                                each item, key in list_product__item_5
+                                                                    .col-md-3.col-sm-6.col-xs-12
+                                                                        .product__item.js_product__item
+                                                                            .product__item__img
+                                                                                img(src= item alt= key)
+                                                                            .product__item__name
+                                                                                p.product__item__name-text.js_product__item__name= key
+                                                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
+                                                                                | Узнать цену
+                            .item
+
+                                -
+                                    var list_product__item_6 = {
+                                    "Трусики для мальчиков и девочек Pampers Pants 4 (Maxi), 52 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0c8/178_157_1/screenshot_5.png?143039261828634",
+                                    "Pampers Sleep&Play 2 (Mini), 88 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/44f/178_157_1/1.jpg?146669172013600",
+                                    "Подгузники Pampers Sleep&Play 4 (Maxi), 68 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/93d/178_157_1/i.jpg?142503106411137",
+                                    "Подгузники Pampers Premium Care 3 (Midi), 60 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/195/178_157_1/dscp_0091.jpg?14250310649972",
+                                    "Трусики  для мальчиков и девочек Pampers Premium Care Pants 4 (Maxi), 22 шт. ":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/4f7/178_157_1/jjq9toia1h4izims5sj5w.png?142503106548667",
+                                    "Трусики для мальчиков и девочек Pampers Premium Care Pants 3 (Midi), 28 шт. ":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/4e5/178_157_1/1.jpg?142503106412551",
+                                    "Трусики для мальчиков и девочек Pampers Premium Care Pants 5 (Junior), 20 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/131/178_157_1/pampers_premium_care_pants_pieluchomajtki_rozmiar_5_junior_40_szt.jpg?142503106611833",
+                                    "Подгузники-трусики для мальчиков и девочек Pampers Pants (Midi), 26 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/c1b/178_157_1/screenshot_3.jpg?145925394014575"
+                                    }
+
+                                each item, key in list_product__item_6
+                                    .col-md-3.col-sm-6.col-xs-12
+                                        .product__item.js_product__item
+                                            .product__item__img
+                                                img(src= item alt= key)
+                                            .product__item__name
+                                                p.product__item__name-text.js_product__item__name= key
+                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
+                                                | Узнать цену
+                            .item
+
+                                -
+                                    var list_product__item_7 = {
+                                    "Детские однораз.подгузники-трусики для мальчиков и девочек Pampers Pants (Extra Large), 19 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0c8/178_157_1/6wbzqwsx.jpg?147265391717250",
+                                    "Подгузники дет.однораз.Pampers Premium Care (Junior), 18 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1ca/178_157_1/4015400740728_5c_4015400740728.jpg?14739510647919",
+                                    "Подгузники Pampers Premium Care (Maxi), 20 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/f9a/178_157_1/screenshot_1.jpg?145925361212817",
+                                    "Подгузники дет.однораз.Pampers New Baby-Dry (Newborn), 43 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/137/178_157_1/0012307_pampers_new_baby_dry_autinbiksites_newborn_1_2_5kg_43gab.jpeg?147265193510674",
+                                    "Подгузники Pampers Premium Care 0 (Newborn), 30 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ffb/178_157_1/dsca_0150.jpg?142503113111757",
+                                    "Подгузники Pampers Premium Care (Midi), 20 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ddc/178_157_1/d7470e2ee5c38e3f9d4bc28a2269c1f7.jpg?145925371112846",
+                                    "Детские однораз.подгузники-трусики для мальчиков и девочек Pampers Pants (Junior), 15 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0ef/178_157_1/pampers_4015400727026_images_1437893038.jpg?146297257613494",
+                                    "Детские однораз.подгузники-трусики для мальчиков и девочек Pampers Pants (Maxi), 16 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/824/178_157_1/21.jpg?146297257614465"
+                                    }
+
+                                each item, key in list_product__item_7
+                                    .col-md-3.col-sm-6.col-xs-12
+                                        .product__item.js_product__item
+                                            .product__item__img
+                                                img(src= item alt= key)
+                                            .product__item__name
+                                                p.product__item__name-text.js_product__item__name= key
+                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
+                                                | Узнать цену
+                            .item
+                                -
+                                    var list_product__item_8 = {
+                                    "Подгузники Pampers Active Baby-dry 4 (Maxi), 20 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/de0/178_157_1/dsca_0120.jpg?142503113112259",
+                                    "Подгузники Pampers Active Baby-dry 3 (Midi), 22 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/e00/178_157_1/dsca_0116.jpg?142503113112452",
+                                    "Подгузники Pampers Active Baby 4+ (Maxi Plus), 18 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/802/178_157_1/dsca_0119.jpg?142503106713277",
+                                    "Подгузники Pampers Active Baby-dry 5 (Junior), 16 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/faa/178_157_1/dsca_0122.jpg?142503113112027",
+                                    "Подгузники Pampers New Baby-dry 2 (Mini), 27 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/10e/178_157_1/10ee1227f770a68337ecda797e08034e.jpg?142503113119071",
+                                    "Подгузники Pampers Newbaby-Dry 1 (Newborn), 27 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/503/178_157_1/dsca_0061.jpg?142503102014453",
+                                    "Подгузники Pampers Premium Care (Mini), 22 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/277/178_157_1/premium_care_3_6_22.jpg?144912859012543",
+                                    "Подгузники Pampers Premium Care 1 (Newborn), 22 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/479/178_157_1/11112222.jpg?144912859011831"
+                                    }
+
+                                each item, key in list_product__item_8
+                                    .col-md-3.col-sm-6.col-xs-12
+                                        .product__item.js_product__item
+                                            .product__item__img
+                                                img(src= item alt= key)
+                                            .product__item__name
+                                                p.product__item__name-text.js_product__item__name= key
+                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
+                                                | Узнать цену
+                            .item
+                                -
+                                    var list_product__item_9 = {
+                                    "Подгузники Pampers Sleep&Play 4 (Maxi),  14 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/c43/178_157_1/dsca_0147.jpg?142503115712276",
+                                    "Подгузники Pampers Sleep&Play 5 (Junior),  11 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/cb8/178_157_1/dsca_0144.jpg?142503158811614",
+                                    "Подгузники Pampers Sleep&Play 3 (Midi),  16 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/8a4/178_157_1/dsca_0148.jpg?142503158812756",
+                                    "Подгузники дет.однораз.Pampers Active Baby-Dry (Midi), 10 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/672/178_157_1/10.jpg?147265067910245",
+                                    "Подгузники дет.однораз.Pampers Active Baby-Dry (Junior), 10 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/144/178_157_1/319533.jpg?147394880011132",
+                                    "Подгузники дет.однораз.Pampers Active Baby-Dry (Maxi), 10 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/a01/178_157_1/319532.jpg?147394880010297",
+                                    "Подгузники Pampers Sleep & Play 2 (Mini), 18 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ce6/178_157_1/dsca_0142.jpg?142503158812527",
+                                    "Подгузники Pampers New Baby 2 (Mini), 94 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/69e/178_157_1/69e377f4813b3f57b84897e7fa249477.jpg?142503106114805"
+                                    }
+
+                                each item, key in list_product__item_9
+                                    .col-md-3.col-sm-6.col-xs-12
+                                        .product__item.js_product__item
+                                            .product__item__img
+                                                img(src= item alt= key)
+                                            .product__item__name
+                                                p.product__item__name-text.js_product__item__name= key
+                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
+                                                | Узнать цену
+                            .item
+                                -
+                                    var list_product__item_10 = {
+                                    "Подгузники Pampers Active Baby-dry 4 (Maxi), 82 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/517/178_157_1/dsca_0064.jpg?142503115712957",
+                                    "Подгузники Pampers Active Baby-dry 4+ (Maxi Plus), 74 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/d90/178_157_1/dsca_0068.jpg?142503106713513",
+                                    "Подгузники Pampers Active Baby-dry  5 (Junior), 68 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/89e/178_157_1/dsca_0072.jpg?142503106512967",
+                                    "Подгузники Pampers Active Baby-dry 6 (Extra Large), 64 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0c9/178_157_1/dsca_0092.jpg?142503113311076",
+                                    "Подгузники Pampers Premium Care 5 (Junior), 21 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/00a/178_157_1/dsca_0158.jpg?142503106911945",
+                                    "Подгузники Pampers Premium Care 4 (Maxi), 24 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/de3/178_157_1/dsca_0161.jpg?142503109711201",
+                                    "Подгузники Pampers Premium Care 3 (Midi), 27 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/966/178_157_1/dsca_0155.jpg?142503109713589",
+                                    "Подгузники Pampers Premium Care 2 (Mini), 32 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/602/178_157_1/dsca_0157.jpg?142503109711253"
+                                    }
+
+                                each item, key in list_product__item_10
+                                    .col-md-3.col-sm-6.col-xs-12
+                                        .product__item.js_product__item
+                                            .product__item__img
+                                                img(src= item alt= key)
+                                            .product__item__name
+                                                p.product__item__name-text.js_product__item__name= key
+                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
+                                                | Узнать цену
+                    a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+                        span.carousel__icon.carousel_left(aria-hidden='true')
+                        span.sr-only Previous
+                    a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+                        span.carousel__icon.carousel_right(aria-hidden='true')
+                        span.sr-only Next
 
 
-                        //.col-md-3
-                                                        //    .product__item
-                                                        //        .product__item__img
-                                                        //            img(src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/263/178_157_1/pampers_active_baby_dry_4_132shtuki_new.jpg?146433262112778" alt="Подгузники Pampers Active Baby-Dry 4 (Maxi), 132 шт.")
-                                                        //        .product__item__name
-                                                        //            | Подгузники Pampers Active Baby-Dry 4 (Maxi), 132 шт.
-                                                        //        .product__item__btn
-                                                        //            | Подробнее
-                                                        //.col-md-3
-                                                        //    .product__item
-                                                        //        .product__item__img
-                                                        //            img(src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/6ed/178_157_1/6edfad3e4dbc572d736e4837155076f6.jpg?142503128211938" alt="Подгузники Pampers Premium Care 5 (Junior), 88 шт.")
-                                                        //        .product__item__name
-                                                        //            | Подгузники Pampers Premium Care 5 (Junior), 88 шт.
-                                                        //        .product__item__btn
-                                                        //            | Подробнее
-                                                        //.col-md-3
-                                                        //    .product__item
-                                                        //        .product__item__img
-                                                        //            img(src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/030/178_157_1/dsca_0057.jpg?142503106612324" alt="Подгузники Pampers Premium Care 4 (Maxi), 104 шт.")
-                                                        //
-                                                        //        .product__item__name
-                                                        //            | Подгузники Pampers Premium Care 4 (Maxi), 104 шт.
-                                                        //        .product__item__btn
-                                                        //            | Подробнее
-                                                        //.col-md-3
-                                                        //    .product__item
-                                                        //        .product__item__img
-                                                        //            img(src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/53b/178_157_1/screenshot_5.jpg?144621356212947" alt="Подгузники Pampers Active Baby-Dry 3 (Midi), 150 шт.")
-                                                        //        .product__item__name
-                                                        //            | Подгузники Pampers Active Baby-Dry 3 (Midi), 150 шт.
-                                                        //        .product__item__btn
-                                                        //            | Подробнее
-                                                        //.col-md-3
-                                                        //    .product__item
-                                                        //        .product__item__img
-                                                        //            img(src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/7dd/178_157_1/screenshot_3.png?143039175428723" alt="Трусики для мальчиков и девочек Pampers Pants 5 (Junior), 96 шт.")
-                                                        //        .product__item__name
-                                                        //            | Трусики для мальчиков и девочек Pampers Pants 5 (Junior), 96 шт.
-                                                        //        .product__item__btn
-                                                        //            | Подробнее
-                                                        //.col-md-3
-                                                        //    .product__item
-                                                        //        .product__item__img
-                                                        //            img(src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/024/178_157_1/screenshot_2.png?143039170530235" alt="Трусики для мальчиков и девочек Pampers Pants 4 (Maxi), 104 шт.")
-                                                        //        .product__item__name
-                                                        //            | Трусики для мальчиков и девочек Pampers Pants 4 (Maxi), 104 шт.
-                                                        //        .product__item__btn
-                                                        //            | Подробнее
-                                                        //.col-md-3
-                                                        //    .product__item
-                                                        //        .product__item__img
-                                                        //            img(src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/549/178_157_1/cbf1569d52969d644c18c0a126039d77.jpg?143228421510701" alt="Трусики для мальчиков и девочек Pampers Pants 6 (Extra Large), 88 шт.")
-                                                        //        .product__item__name
-                                                        //            | Трусики для мальчиков и девочек Pampers Pants 6 (Extra Large), 88 шт.
-                                                        //        .product__item__btn
-                                                        //            | Подробнее
-                                                        //.col-md-3
-                                                        //    .product__item
-                                                        //        .product__item__img
-                                                        //            img(src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/588/178_157_1/1016081749.jpg?149279339113693" alt="Подгузники Pampers Active Baby-Dry 4+ (Maxi Plus), 120 шт.")
-                                                        //        .product__item__name
-                                                        //            | Подгузники Pampers Active Baby-Dry 4+ (Maxi Plus), 120 шт.
-                                                        //        .product__item__btn
-                                                        //            | Подробнее
-                                                        //.col-md-3
-                                                        //    .product__item
-                                                        //        .product__item__img
-                                                        //            img(src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/505/178_157_1/screenshot_1.png?143039159429145" alt="Трусики для мальчиков и девочек Pampers Pants 3 (Midi), 120 шт.")
-                                                        //        .product__item__name
-                                                        //            | Трусики для мальчиков и девочек Pampers Pants 3 (Midi), 120 шт.
-                                                        //        .product__item__btn
-                                                        //            | Подробнее
 
 
 
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/549/178_157_1/549848a0ab4984f627be8e9e6d9764fb.jpg?142503115714671" alt="Подгузники Pampers Active Baby-dry (Maxi), 70 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/9b4/178_157_1/pampers6_54.jpg?144912862314228" alt="Подгузники Pampers Active Baby-Dry 6 (Extra Large), 54 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/760/178_157_1/dsca_0162.jpg?142503106112468" alt="Подгузники Pampers Premium Care 5 (Junior), 44 шт."
-                                                                    //
-                                                                    //
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/883/178_157_1/883b5f7ed3bb5796f14ce7f7ec0f67ca.jpg?14250310666825" alt="Подгузники Pampers Premium Care 4 (Maxi), 52 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/5a7/178_157_1/res_547e91e81083e566d50c8ff988273562_350x350c_6k6n.jpg?144464048512127" alt="Подгузники Pampers Active Baby-Dry 4+ (Maxi Plus), 70 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/5d9/178_157_1/screenshot_8.jpg?144361778710318" alt="Подгузники Pampers Active Baby-dry 4 (Maxi), 76 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/3cb/178_157_1/shottype1_328x328.jpg?144308778214975" alt="Подгузники Pampers Active Baby-Dry 3 (Midi), 90 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/f8d/178_157_1/screenshot_1.jpg?14436156338166" alt="Подгузники Pampers Active Baby-dry 5 (Junior), 64 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ff7/178_157_1/1111.jpg?14491286239321" alt="Подгузники Pampers Active Baby-Dry 6 (Extra Large), 56 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/a2b/178_157_1/screenshot_1.png?143074189924166" alt="Трусики для мальчиков и девочек Pampers Pants 6 (Extra Large), 44 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/9a2/178_157_1/9a2363e09b25b3026052123fada59461.jpg?142503106113272" alt="Подгузники Pampers Sleep&Play Junior 5 (11-18 кг) 74 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/57f/178_157_1/screenshot_4.png?143039322428385" alt="Трусики для мальчиков и девочек Pampers Pants 3 (Midi), 60 шт."
-                                                                    //
-                                                                    //
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0fd/178_157_1/29518.jpg?147213590114451" alt="Подгузники Pampers Premium Care 1 (Newborn), 88 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/117/178_157_1/dsca_0075.jpg?142503102013937" alt="Подгузники Pampers Sleep&Play 3 (Midi), 100 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/473/178_157_1/dsca_0087.jpg?142503101913970" alt="Подгузники Pampers Sleep&Play Maxi 4 (8-14 кг) 86 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1b7/178_157_1/screenshot_6.png?143039223528743" alt="Трусики для мальчиков и девочек Pampers Pants 5 (Junior), 48 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0c8/178_157_1/screenshot_5.png?143039261828634" alt="Трусики для мальчиков и девочек Pampers Pants 4 (Maxi), 52 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/44f/178_157_1/1.jpg?146669172013600" alt="Pampers Sleep&Play 2 (Mini), 88 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/93d/178_157_1/i.jpg?142503106411137" alt="Подгузники Pampers Sleep&Play 4 (Maxi), 68 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/195/178_157_1/dscp_0091.jpg?14250310649972" alt="Подгузники Pampers Premium Care 3 (Midi), 60 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/4f7/178_157_1/jjq9toia1h4izims5sj5w.png?142503106548667" alt="Трусики  для мальчиков и девочек Pampers Premium Care Pants 4 (Maxi), 22 шт. "
-                                                                    //
-                                                                    //
-                                                                    //
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/4e5/178_157_1/1.jpg?142503106412551" alt="Трусики для мальчиков и девочек Pampers Premium Care Pants 3 (Midi), 28 шт. "
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/131/178_157_1/pampers_premium_care_pants_pieluchomajtki_rozmiar_5_junior_40_szt.jpg?142503106611833" alt="Трусики для мальчиков и девочек Pampers Premium Care Pants 5 (Junior), 20 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/c1b/178_157_1/screenshot_3.jpg?145925394014575" alt="Подгузники-трусики для мальчиков и девочек Pampers Pants (Midi), 26 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0c8/178_157_1/6wbzqwsx.jpg?147265391717250" alt="Детские однораз.подгузники-трусики для мальчиков и девочек Pampers Pants (Extra Large), 19 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1ca/178_157_1/4015400740728_5c_4015400740728.jpg?14739510647919" alt="Подгузники дет.однораз.Pampers Premium Care (Junior), 18 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/f9a/178_157_1/screenshot_1.jpg?145925361212817" alt="Подгузники Pampers Premium Care (Maxi), 20 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/137/178_157_1/0012307_pampers_new_baby_dry_autinbiksites_newborn_1_2_5kg_43gab.jpeg?147265193510674" alt="Подгузники дет.однораз.Pampers New Baby-Dry (Newborn), 43 шт.
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ffb/178_157_1/dsca_0150.jpg?142503113111757" alt="Подгузники Pampers Premium Care 0 (Newborn), 30 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ddc/178_157_1/d7470e2ee5c38e3f9d4bc28a2269c1f7.jpg?145925371112846" alt="Подгузники Pampers Premium Care (Midi), 20 шт."
-                                                                    //
-                                                                    //
-                                                                    //
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0ef/178_157_1/pampers_4015400727026_images_1437893038.jpg?146297257613494" alt="Детские однораз.подгузники-трусики для мальчиков и девочек Pampers Pants (Junior), 15 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/824/178_157_1/21.jpg?146297257614465" alt="Детские однораз.подгузники-трусики для мальчиков и девочек Pampers Pants (Maxi), 16 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/de0/178_157_1/dsca_0120.jpg?142503113112259" alt="Подгузники Pampers Active Baby-dry 4 (Maxi), 20 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/e00/178_157_1/dsca_0116.jpg?142503113112452" alt="Подгузники Pampers Active Baby-dry 3 (Midi), 22 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/802/178_157_1/dsca_0119.jpg?142503106713277" alt="Подгузники Pampers Active Baby 4+ (Maxi Plus), 18 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/faa/178_157_1/dsca_0122.jpg?142503113112027" alt="Подгузники Pampers Active Baby-dry 5 (Junior), 16 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/10e/178_157_1/10ee1227f770a68337ecda797e08034e.jpg?142503113119071" alt="Подгузники Pampers New Baby-dry 2 (Mini), 27 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/503/178_157_1/dsca_0061.jpg?142503102014453" alt="Подгузники Pampers Newbaby-Dry 1 (Newborn), 27 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/277/178_157_1/premium_care_3_6_22.jpg?144912859012543" alt="Подгузники Pampers Premium Care (Mini), 22 шт."
-                                                                    //
-                                                                    //
-                                                                    //
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/479/178_157_1/11112222.jpg?144912859011831" alt="Подгузники Pampers Premium Care 1 (Newborn), 22 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/c43/178_157_1/dsca_0147.jpg?142503115712276" alt="Подгузники Pampers Sleep&Play 4 (Maxi),  14 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/cb8/178_157_1/dsca_0144.jpg?142503158811614" alt="Подгузники Pampers Sleep&Play 5 (Junior),  11 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/8a4/178_157_1/dsca_0148.jpg?142503158812756" alt="Подгузники Pampers Sleep&Play 3 (Midi),  16 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/672/178_157_1/10.jpg?147265067910245" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Midi), 10 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/144/178_157_1/319533.jpg?147394880011132" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Junior), 10 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/a01/178_157_1/319532.jpg?147394880010297" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Maxi), 10 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ce6/178_157_1/dsca_0142.jpg?142503158812527" alt="Подгузники Pampers Sleep & Play 2 (Mini), 18 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/69e/178_157_1/69e377f4813b3f57b84897e7fa249477.jpg?142503106114805" alt="Подгузники Pampers New Baby 2 (Mini), 94 шт."
-                                                                    //
-                                                                    //
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/517/178_157_1/dsca_0064.jpg?142503115712957" alt="Подгузники Pampers Active Baby-dry 4 (Maxi), 82 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/d90/178_157_1/dsca_0068.jpg?142503106713513" alt="Подгузники Pampers Active Baby-dry 4+ (Maxi Plus), 74 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/89e/178_157_1/dsca_0072.jpg?142503106512967" alt="Подгузники Pampers Active Baby-dry  5 (Junior), 68 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0c9/178_157_1/dsca_0092.jpg?142503113311076" alt="Подгузники Pampers Active Baby-dry 6 (Extra Large), 64 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/00a/178_157_1/dsca_0158.jpg?142503106911945" alt="Подгузники Pampers Premium Care 5 (Junior), 21 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/de3/178_157_1/dsca_0161.jpg?142503109711201" alt="Подгузники Pampers Premium Care 4 (Maxi), 24 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/966/178_157_1/dsca_0155.jpg?142503109713589" alt="Подгузники Pampers Premium Care 3 (Midi), 27 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/602/178_157_1/dsca_0157.jpg?142503109711253" alt="Подгузники Pampers Premium Care 2 (Mini), 32 шт."
-                                                                    //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/e1b/178_157_1/dsca_0081.jpg?142503106211504" alt="Подгузники Pampers Premium Care 2 (Mini), 72 шт."
-                                                                    //
+
+
+
+
+
+
+
+
+
+
+                                                                  //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/e1b/178_157_1/dsca_0081.jpg?142503106211504" alt="Подгузники Pampers Premium Care 2 (Mini), 72 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/857/178_157_1/dsca_0153.jpg?142503109711183" alt="Подгузники Pampers Premium Care 1 (Newborn), 33 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/c5f/178_157_1/dsca_0078.jpg?142503106412640" alt="Подгузники Pampers Premium Care 1 (Newborn), 78 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/3fb/178_157_1/dsca_0076.jpg?142503113211605" alt="Подгузники Pampers Premium Care 1 (Small), 94 шт."
@@ -247,8 +275,6 @@
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/f31/178_157_1/89f383b40d9d68e5a322e1e507c14ece.jpg?142890662813334" alt="Подгузники Pampers Active Baby-dry 6 (Extra Large), 16 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/f76/178_157_1/f763cb8e537d1fcf98ba551b4176bb54.jpg?142503120315664" alt="Подгузники-трусики Pampers Active Girl 4(Maxi), 104 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/e6b/178_157_1/dsca_0085.jpg?142503113310626" alt="Подгузники Pampers Premium Care 5 (Junior), 56 шт."
-                                                                    //
-                                                                    //
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/469/178_157_1/dsca_0096.jpg?142503128010886" alt="Подгузники Pampers Active Baby-dry 3 (Midi), 112 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/d1a/178_157_1/dsca_0071.jpg?142503113214746" alt="Подгузники Pampers Active Baby 3 (Midi), 82 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0fa/178_157_1/4015400397649_activebaby_11_18kg_5razmer_junior_82sht_dzhayant_upakovka_plyus_.jpg?143315168719334" alt="Подгузники Pampers Active Baby-Dry 5 (Junior), 82 шт."
@@ -258,8 +284,6 @@
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/89e/178_157_1/screenshot_8.png?142503128134748" alt="Подгузники Pampers Active Baby-Dry 6 (Extra Large), 76 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/5cd/178_157_1/screenshot_3.jpg?144308726716239" alt="Подгузники Pampers Premium Care 2 (Mini), 80 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/d77/178_157_1/screenshot_6.jpg?144361814912534" alt="Подгузники Pampers Premium Care 2 (Mini), 96 шт."
-                                                                    //
-                                                                    //
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/87b/178_157_1/screenshot_4.jpg?144361726413194" alt="Подгузники Pampers Premium Care 1 (Newborn), 108 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/16d/178_157_1/screenshot_2.jpg?144621278114380" alt="Подгузники Pampers Active Baby-Dry 5 (Junior), 111 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ebf/178_157_1/3229760h.jpg?146297224711725" alt="Подгузники дет.однораз.Pampers Sleep&Play (Junior), 58 шт."
@@ -269,7 +293,6 @@
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/3fc/178_157_1/podguzniki_detskie_pampers_active_baby_dry_midi_4_9_kg_dzhaynt_upakovka_90_sht.jpg?147066041115322" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Midi), 68 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/83b/178_157_1/126.jpg?147265217915316" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Junior), 126 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/4d9/178_157_1/44.jpg?147265218410041" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Junior), 44 шт."
-                                                                    //
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/f38/178_157_1/87.jpg?147265218015046" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Junior), 87 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/cf3/178_157_1/i.jpg?147265114812049" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Maxi), 106 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/0f8/178_157_1/podguzniki-pampers-active-baby-3-midi_-4_9-kg._-62-sht._enl.jpg?147265126812294" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Midi), 62 шт."
@@ -279,5 +302,3 @@
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/e62/178_157_1/pampers_podguzniki_sleep_and_play_midi_4_9_kg_dzhambo_upakovka_78_20160302210308.jpg?147265018113121" alt="Подгузники дет.однораз.Pampers Sleep&Play (Midi), 78 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/f92/178_157_1/4015400649724.jpg?149372807111899" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Maxi), 46 шт."
                                                                     //src="//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/897/178_157_1/17_4000x_1488451760.png?149372807124141" alt="Подгузники дет.однораз.Pampers Active Baby-Dry (Midi), 54 шт."
-                                                                    //
-                                                                    //

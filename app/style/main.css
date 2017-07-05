@@ -292,6 +292,9 @@ body {
   background: #d3f1fa;
   border-radius: 6px;
   padding-bottom: 25px; }
+  @media screen and (max-width: 480px) {
+    .catalog__block__wrap {
+      padding-bottom: 50px; } }
 
 .catalog__name__block {
   background: url("../img/BGbody.png") #5fc3df;
@@ -364,6 +367,9 @@ body {
 
 .catalog__block__wrap .carousel-indicators {
   bottom: -25px; }
+  @media screen and (max-width: 480px) {
+    .catalog__block__wrap .carousel-indicators {
+      bottom: -50px; } }
 .catalog__block__wrap .carousel-indicators li {
   width: 15px;
   height: 15px;
@@ -375,6 +381,23 @@ body {
   background: url("../img/sl_ind.png") center 0px no-repeat; }
 .catalog__block__wrap .carousel-indicators li.active {
   background: url("../img/sl_ind.png") center -35px no-repeat; }
+.catalog__block__wrap .carousel-control {
+  background: none; }
+.catalog__block__wrap .carousel__icon {
+  width: 20px;
+  height: 40px;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  opacity: 0.2; }
+  .catalog__block__wrap .carousel__icon:hover {
+    opacity: 0.8; }
+.catalog__block__wrap .carousel_left {
+  background: url("../img/lest.png") no-repeat;
+  left: 15px; }
+.catalog__block__wrap .carousel_right {
+  background: url("../img/rig.png") no-repeat;
+  right: 15px; }
 
 .reviews__block {
   margin-bottom: 50px; }

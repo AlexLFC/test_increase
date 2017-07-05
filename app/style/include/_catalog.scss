@@ -11,6 +11,9 @@
   background: $catalogBG;
   border-radius: 6px;
   padding-bottom: 25px;
+  @include media_phones{
+    padding-bottom: 50px;
+  }
 }
 .catalog__name__block{
   background: url("../img/BGbody.png") $catalogNameBG;
@@ -93,6 +96,9 @@
 .catalog__block__wrap{
   .carousel-indicators{
     bottom: -25px;
+    @include media_phones{
+      bottom: -50px;
+    }
   }
   .carousel-indicators li {
     width: 15px;
@@ -108,7 +114,28 @@
     background: url("../img/sl_ind.png") center -35px no-repeat;
 
   }
-
+  .carousel-control{
+    background: none;
+  }
+  .carousel__icon{
+    width: 20px;
+    height: 40px;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    opacity: 0.2;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  .carousel_left{
+    background: url("../img/lest.png") no-repeat;
+    left: 15px;
+  }
+  .carousel_right{
+    background: url("../img/rig.png") no-repeat;
+    right: 15px;
+  }
 }
 
 
