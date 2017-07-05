@@ -66,3 +66,43 @@
   text-align: center;
   color: $colorError;
 }
+
+.modal__gratitude{
+  .modal-dialog{
+    width: 450px;
+  }
+  .modal-content {
+    border: 5px solid $mainColor;
+    border-radius: 120px 104px 138px 144px;
+    padding: 25px 50px;
+  }
+  .modal-header{
+    border-bottom: none;
+    color: $advantageTextColor;
+    font-size: 24px;
+    font-family: $secFontFamily;
+    text-align: center;
+    .modal-title{
+      padding-top: 36px;
+    }
+    .close{
+      width: 25px;
+      height: 25px;
+      background: url("../img/close.png") center center no-repeat;
+      text-shadow: none;
+      opacity: 1;
+    }
+  }
+}
+.modal__gratitude__title{
+  color: $colorModalTitle;
+  font-size: 40px;
+  font-family: $mailFontFamily;
+}
+.gratitude__text{
+  color: $colorModalText;
+  font-family: $secFontFamily;
+  font-size: 20px;
+  text-align: center;
+
+}

@@ -401,4 +401,36 @@ body {
   text-align: center;
   color: #C00000; }
 
+.modal__gratitude .modal-dialog {
+  width: 450px; }
+.modal__gratitude .modal-content {
+  border: 5px solid #8bd7fa;
+  border-radius: 120px 104px 138px 144px;
+  padding: 25px 50px; }
+.modal__gratitude .modal-header {
+  border-bottom: none;
+  color: #484848;
+  font-size: 24px;
+  font-family: "Calibri";
+  text-align: center; }
+  .modal__gratitude .modal-header .modal-title {
+    padding-top: 36px; }
+  .modal__gratitude .modal-header .close {
+    width: 25px;
+    height: 25px;
+    background: url("../img/close.png") center center no-repeat;
+    text-shadow: none;
+    opacity: 1; }
+
+.modal__gratitude__title {
+  color: #2c8ad4;
+  font-size: 40px;
+  font-family: "HelveticaNeueCyr-Medium"; }
+
+.gratitude__text {
+  color: #515151;
+  font-family: "Calibri";
+  font-size: 20px;
+  text-align: center; }
+
 /*# sourceMappingURL=main.css.map */

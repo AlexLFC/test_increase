@@ -67,13 +67,14 @@ function readeDocumentForm() {
             } else if (data==="incorrect"){
                 $formInfo.text(messages.incorrect);
             } else if (data==="successfull"){
-                $formInfo.text(messages.successfull);
+                $formInfo.text("");
                 $userPhone.val("");
+                $('#myModal').modal('hide');
+                $('#gratitude').modal('show');
             }else {
                 $formInfo.text(messages.errorServer);
             };
         };
-
 
         /**
          * Функция для обработок ошибок.
@@ -92,7 +93,7 @@ function readeDocumentForm() {
 
             if(phone === ""){
                 $formInfo.text(messages.error);
-                console.log(messages.error);
+                $('#gratitude').modal('show');
             } else {
                 if(!regexp.test(phone)){
                     $formInfo.text(messages.incorrect);
@@ -162,8 +163,10 @@ function readeDocumentForm() {
             } else if (data==="incorrect"){
                 $formFindPriceInfo.text(messagesPrice.incorrect);
             } else if (data==="successfull"){
-                $formFindPriceInfo.text(messagesPrice.successfull);
+                $formFindPriceInfo.text("");
                 $userPhone.val("");
+                $('#myModal').modal('hide');
+                $('#gratitude').modal('show');
             }else {
                 $formInfo.text(messagesPrice.errorServer);
             };
@@ -216,7 +219,6 @@ function readeDocumentForm() {
 
             if(phone === ""){
                 $formFindPriceInfo.text(messagesPrice.error);
-                console.log(messagesPrice.error);
             } else {
                 if(!regexp.test(phone)){
                     $formFindPriceInfo.text(messagesPrice.incorrect);
@@ -229,3 +231,5 @@ function readeDocumentForm() {
         };
     };
 };
+
+

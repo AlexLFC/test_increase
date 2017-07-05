@@ -1,4 +1,4 @@
-// Modal
+// Modal form
 #myModal.modal.fade.modal__findPrice(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
     .modal-dialog(role='document')
         .modal-content
@@ -15,3 +15,13 @@
                         input#nameProduct.modal__form__nameProduct(type='text' name="nameProduct")
                     .form__findPrice__info
                     button.modal__form__btn(type='submit') оставить заявку
+// Modal
+#gratitude.modal.modal__gratitude(tabindex='-1', role='dialog', aria-labelledby='modalgratitudeLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                h4#modalgratitudeLabel.modal-title.modal__gratitude__title Спасибо!
+            .modal-body
+                p.gratitude__text Ваша заявка отправлена, мы свяжемся с вами в ближайшее время.
