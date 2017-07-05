@@ -666,32 +666,28 @@
           </div>
         </footer>
         <!-- Modal-->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade modal__findPrice" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="myModalLabel">Оставьте Ваши данные и узнайте цену на продукт!</h4>
               </div>
               <div class="modal-body">
                 <form id="findPrice">
                   <div class="form-group">
                     <label for="userNamePrice">Ваше имя</label>
-                    <input class="form-control" id="userNamePrice" type="text" placeholder="Ваше имя..." name="userNamePrice">
+                    <input class="form-control modal__form__input" id="userNamePrice" type="text" placeholder="Ваше имя..." name="userNamePrice">
                   </div>
                   <div class="form-group">
                     <label for="userPhonePrice">Номер телефона</label>
-                    <input class="form-control" id="userPhonePrice" type="text" placeholder="Номер телефона" name="userPhonePrice">
+                    <input class="form-control modal__form__input" id="userPhonePrice" type="text" placeholder="Номер телефона" name="userPhonePrice">
                   </div>
                   <div class="form-group">
-                    <input id="nameProduct" type="text" name="nameProduct">
+                    <input class="modal__form__nameProduct" id="nameProduct" type="text" name="nameProduct">
                   </div>
-                  <button class="btn btn-default" type="submit">Submit</button>
+                  <button class="modal__form__btn" type="submit">оставить заявку</button>
                 </form>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
-                <button class="btn btn-primary" type="button">Save changes</button>
               </div>
             </div>
           </div>

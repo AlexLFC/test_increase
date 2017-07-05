@@ -1,0 +1,53 @@
+.modal__findPrice{
+  .modal-content {
+    border: 5px solid $mainColor;
+    border-radius: 120px 104px 138px 144px;
+    padding: 25px 50px;
+  }
+  .modal-header{
+    border-bottom: none;
+    color: $advantageTextColor;
+    font-size: 24px;
+    font-family: $secFontFamily;
+    .close{
+      width: 25px;
+      height: 25px;
+      background: url("../img/close.png") center center no-repeat;
+      text-shadow: none;
+      opacity: 1;
+    }
+  }
+}
+
+.modal__form__input{
+  width: 100%;
+  height: 40px;
+  padding-left: 14px;
+  line-height: 40px;
+  border: 1px solid $mainColor;
+  border-radius: 6px;
+  margin-right: 22px;
+  &::-webkit-input-placeholder {color:#000000;}
+  &::-moz-placeholder          {color:#000000;}/* Firefox 19+ */
+  &:-moz-placeholder           {color:#000000;}/* Firefox 18- */
+  &:-ms-input-placeholder      {color:#000000;}
+}
+
+.modal__form__btn{
+  border-radius: 6px;
+  background: $btnFormColor;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+  width: 223px;
+  height: 40px;
+  line-height: 40px;
+  color: $mainTextColorL;
+  border: none;
+  font-family: $secFontFamily;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 auto;
+  display: block;
+}
+.modal__form__nameProduct{
+  opacity: 0;
+}
