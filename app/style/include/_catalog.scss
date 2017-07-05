@@ -42,7 +42,8 @@
   overflow: hidden;
 }
 .product__item__name-text{
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 16px;
   font-family: $secFontFamily;
   color: $colorNameProd;
 }
@@ -52,7 +53,7 @@
   background-color: $secondColor;
   box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
   border: none;
-  padding: 5px 15px;
+  padding: 5px 32px;
   font-size: 16px;
   font-family: $secFontFamily;
   color: $mainTextColorL;
