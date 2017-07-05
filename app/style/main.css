@@ -261,29 +261,41 @@ body {
 .catalog__block__wrap .carousel-indicators li.active {
   background: url("../img/sl_ind.png") center -35px no-repeat; }
 
-.reviews__name {
-  color: #737373;
-  font-size: 45px;
-  font-family: "HelveticaNeueCyr-Medium"; }
+.reviews__item__onliner {
+  width: 100%;
+  padding-left: 90px;
+  padding-top: 14px;
+  background: url(../img/avatar.png) no-repeat 10px 10px;
+  background-size: 60px 60px; }
 
-.reviews__item__text {
-  font-size: 16px;
-  font-family: "Calibri";
-  color: #737373;
-  font-style: italic;
-  text-align: left; }
+.reviews__item__onliner__name {
+  font: 11px/21px 'Open Sans',Arial,Helvetica,Verdana,sans-serif;
+  color: #4d4d4d;
+  font-weight: 700;
+  margin-bottom: 10px; }
 
-.reviews__item__name {
-  font-size: 20px;
-  font-family: "Calibri";
-  color: #f48fb1;
-  text-align: right; }
+.reviews__item__onliner__data {
+  font-weight: 500;
+  color: gray;
+  font: 11px/21px 'Open Sans',Arial,Helvetica,Verdana,sans-serif; }
 
-.reviews__item__kinship {
-  font-size: 14px;
-  font-family: "Calibri";
-  color: #737373;
-  text-align: right; }
+.reviews__item__onliner__title {
+  font: 700 25px/29px 'Open Sans',Arial,Helvetica,Verdana,sans-serif;
+  margin-bottom: 13px;
+  color: #333; }
+
+.reviews__item__onliner__stars {
+  color: #c60;
+  font: 700 13px/21px 'Open Sans',Arial,Helvetica,Verdana,sans-serif;
+  margin-left: -5px;
+  padding-left: 128px;
+  margin-bottom: 10px;
+  background: url(../img/stars.png) no-repeat 2px -5px; }
+
+.reviews__item__onliner__text {
+  font: 15px/23px 'Open Sans',Arial,Helvetica,Verdana,sans-serif;
+  margin-bottom: 12px;
+  color: #333; }
 
 .advantage__block {
   margin-bottom: 100px; }
