@@ -1,6 +1,9 @@
 .modal__findPrice{
   .modal-dialog{
     width: 450px;
+    @include media_tablets{
+      width: 100%;
+    }
   }
   .modal-content {
     border: 5px solid $mainColor;
@@ -70,6 +73,9 @@
 .modal__gratitude{
   .modal-dialog{
     width: 450px;
+    @include media_tablets{
+      width: 100%;
+    }
   }
   .modal-content {
     border: 5px solid $mainColor;

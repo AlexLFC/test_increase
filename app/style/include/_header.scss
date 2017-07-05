@@ -4,12 +4,27 @@
   height: 470px;
   background: url("../img/HeaderIMG1.jpg");
   background-size: cover;
+  @include media_850{
+    background: url("../img/HeaderIMG1.jpg") -65px -75px no-repeat;
+  }
+  @include media_phones{
+    background-size: 863px 360px
+  }
 }
 
 
 .header__wrapper{
   position: relative;
   margin-bottom: 144px;
+  @include media_laptop{
+    margin-bottom: 40px;
+  }
+  @include media_680{
+    margin-bottom: 150px;
+  }
+  @include media_phones{
+    margin-bottom: 350px;
+  }
 }
 .header__img{
   width: 100%;
@@ -25,6 +40,21 @@
   top: 45px;
   right: 20px;
   background: url("../img/circle.png") no-repeat;
+  @include media_laptop{
+    width: 290px;
+    right: 0;
+    background-size: 290px 290px;
+  }
+  @include media_tablets{
+    top: 90px;
+    right: -70px;
+  }
+  @include media_680{
+    top: 200px;
+  }
+  @include media_phones{
+    top: 290px;
+  }
 
 }
 .header__main-text{
@@ -32,16 +62,26 @@
   font-size: 50px;
   padding-top: 18px;
   font-family: $mailFontFamily;
+  @include media_laptop{
+    font-size: 35px;
+  }
   .header__main-text_class{
     font-size: 38px;
     padding-top: 10px;
     line-height: 25px;
     display: block;
+    @include media_laptop{
+      font-size: 20px;
+      line-height: 16px;
+    }
   }
   .header__main-text_name{
     font-size: 38px;
     color: $colorName;
     display: block;
+    @include media_laptop{
+      font-size: 20px;
+    }
   }
 }
 
@@ -51,6 +91,10 @@
   margin-top: -6px;
   line-height: 23px;
   font-family: $secFontFamily;
+  @include media_laptop{
+    font-size: 18px;
+    line-height: 17px;
+  }
 }
 
 
@@ -63,9 +107,33 @@
   text-align: center;
   padding-top: 21px;
   padding-bottom: rem(50px);
+  @include media_laptop{
+    top: 261px;
+    right: 30px;
+    width: 420px;
+    background-size: 420px 180px;
+  }
+  @include media_tablets{
+    top: 300px;
+    right: -45px;
+  }
+  @include media_680{
+    top: 412px;
+  }
+  @include media_phones{
+    top: 500px;
+    width: 300px;
+    background-size: 300px 260px;
+  }
   .form-inline{
     margin-bottom: 10px;
   }
+}
+.form__phone{
+  @include media_phones{
+    padding: 10px 10px 10px 10px;
+  }
+
 }
 
 .header__form__name{
@@ -73,6 +141,9 @@
   font-size: 23px;
   margin-bottom: 17px;
   font-family: $secFontFamily;
+  @include media_laptop{
+    font-size: 16px;
+  }
 }
 
 .header__form__input{
@@ -87,6 +158,13 @@
   &::-moz-placeholder          {color:#000000;}/* Firefox 19+ */
   &:-moz-placeholder           {color:#000000;}/* Firefox 18- */
   &:-ms-input-placeholder      {color:#000000;}
+  @include media_laptop{
+    width: 160px;
+  }
+  @include media_phones{
+    display: block;
+    margin: 0 auto 10px;
+  }
 }
 
 .header__form__btn{
@@ -101,6 +179,9 @@
   font-family: $secFontFamily;
   font-size: 16px;
   font-weight: 700;
+  @include media_laptop{
+    width: 160px;
+  }
 }
 
 .form__info{
@@ -108,4 +189,7 @@
   height: 30px;
   margin: 0 auto;
   color: $colorError;
+  @include media_laptop{
+    width: 100%;
+  }
 }

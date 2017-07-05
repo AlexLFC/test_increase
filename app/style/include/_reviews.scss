@@ -1,30 +1,11 @@
-//.reviews__name{
-//  color: $colorReviewsName;
-//  font-size: 45px;
-//  font-family: $mailFontFamily;
-//}
-//.reviews__item__text{
-//  font-size: 16px;
-//  font-family: $secFontFamily;
-//  color: $colorReviewsName;
-//  font-style: italic;
-//  text-align: left;
-//}
-//.reviews__item__name{
-//  font-size: 20px;
-//  font-family: $secFontFamily;
-//  color: $secondColor;
-//  text-align: right;
-//}
-//.reviews__item__kinship{
-//  font-size: 14px;
-//  font-family: $secFontFamily;
-//  color: $colorReviewsName;
-//  text-align: right;
-//}
-//.bug__1.bug__1{
-//  margin-bottom: 10px;
-//}
+.reviews__block{
+  margin-bottom: 50px;
+}
+.reviews__custom-container{
+  @include media_phones{
+    padding: 0 5px;
+  }
+}
 .reviews__item__onliner{
   width: 100%;
   padding-left: 90px;
@@ -48,6 +29,9 @@
   font: 700 25px/29px 'Open Sans',Arial,Helvetica,Verdana,sans-serif;
   margin-bottom: 13px;
   color: #333;
+  @include media_phones{
+    font-size: 18px;
+  }
 }
 .reviews__item__onliner__stars{
   color: #c60;

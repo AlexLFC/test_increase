@@ -41,6 +41,10 @@ body {
   font-size: 14px;
   padding-top: 86px;
   padding-bottom: 86px; }
+  @media screen and (max-width: 992px) {
+    body {
+      padding-top: 25px;
+      padding-bottom: 25px; } }
 
 .main-container {
   background: #ffffff;
@@ -51,15 +55,34 @@ body {
   margin: 0 auto;
   padding: 0 86px; }
 
+@media screen and (max-width: 992px) {
+  .container {
+    width: 100%; } }
+
 .header__wrapper {
   width: 100%;
   height: 470px;
   background: url("../img/HeaderIMG1.jpg");
   background-size: cover; }
+  @media screen and (max-width: 850px) {
+    .header__wrapper {
+      background: url("../img/HeaderIMG1.jpg") -65px -75px no-repeat; } }
+  @media screen and (max-width: 480px) {
+    .header__wrapper {
+      background-size: 863px 360px; } }
 
 .header__wrapper {
   position: relative;
   margin-bottom: 144px; }
+  @media screen and (max-width: 992px) {
+    .header__wrapper {
+      margin-bottom: 40px; } }
+  @media screen and (max-width: 680px) {
+    .header__wrapper {
+      margin-bottom: 150px; } }
+  @media screen and (max-width: 480px) {
+    .header__wrapper {
+      margin-bottom: 350px; } }
 
 .header__img {
   width: 100%;
@@ -73,21 +96,46 @@ body {
   top: 45px;
   right: 20px;
   background: url("../img/circle.png") no-repeat; }
+  @media screen and (max-width: 992px) {
+    .header__cont__text {
+      width: 290px;
+      right: 0;
+      background-size: 290px 290px; } }
+  @media screen and (max-width: 768px) {
+    .header__cont__text {
+      top: 90px;
+      right: -70px; } }
+  @media screen and (max-width: 680px) {
+    .header__cont__text {
+      top: 200px; } }
+  @media screen and (max-width: 480px) {
+    .header__cont__text {
+      top: 290px; } }
 
 .header__main-text {
   color: #ffffff;
   font-size: 50px;
   padding-top: 18px;
   font-family: "HelveticaNeueCyr-Medium"; }
+  @media screen and (max-width: 992px) {
+    .header__main-text {
+      font-size: 35px; } }
   .header__main-text .header__main-text_class {
     font-size: 38px;
     padding-top: 10px;
     line-height: 25px;
     display: block; }
+    @media screen and (max-width: 992px) {
+      .header__main-text .header__main-text_class {
+        font-size: 20px;
+        line-height: 16px; } }
   .header__main-text .header__main-text_name {
     font-size: 38px;
     color: #d64667;
     display: block; }
+    @media screen and (max-width: 992px) {
+      .header__main-text .header__main-text_name {
+        font-size: 20px; } }
 
 .header__text-stock {
   color: #ffffff;
@@ -95,6 +143,10 @@ body {
   margin-top: -6px;
   line-height: 23px;
   font-family: "Calibri"; }
+  @media screen and (max-width: 992px) {
+    .header__text-stock {
+      font-size: 18px;
+      line-height: 17px; } }
 
 .header__cont__form {
   position: absolute;
@@ -105,14 +157,39 @@ body {
   text-align: center;
   padding-top: 21px;
   padding-bottom: 3.57143rem; }
+  @media screen and (max-width: 992px) {
+    .header__cont__form {
+      top: 261px;
+      right: 30px;
+      width: 420px;
+      background-size: 420px 180px; } }
+  @media screen and (max-width: 768px) {
+    .header__cont__form {
+      top: 300px;
+      right: -45px; } }
+  @media screen and (max-width: 680px) {
+    .header__cont__form {
+      top: 412px; } }
+  @media screen and (max-width: 480px) {
+    .header__cont__form {
+      top: 500px;
+      width: 300px;
+      background-size: 300px 260px; } }
   .header__cont__form .form-inline {
     margin-bottom: 10px; }
+
+@media screen and (max-width: 480px) {
+  .form__phone {
+    padding: 10px 10px 10px 10px; } }
 
 .header__form__name {
   color: #ffffff;
   font-size: 23px;
   margin-bottom: 17px;
   font-family: "Calibri"; }
+  @media screen and (max-width: 992px) {
+    .header__form__name {
+      font-size: 16px; } }
 
 .header__form__input {
   width: 210px;
@@ -132,6 +209,13 @@ body {
     color: #000000; }
   .header__form__input:-ms-input-placeholder {
     color: #000000; }
+  @media screen and (max-width: 992px) {
+    .header__form__input {
+      width: 160px; } }
+  @media screen and (max-width: 480px) {
+    .header__form__input {
+      display: block;
+      margin: 0 auto 10px; } }
 
 .header__form__btn {
   border-radius: 6px;
@@ -145,12 +229,18 @@ body {
   font-family: "Calibri";
   font-size: 16px;
   font-weight: 700; }
+  @media screen and (max-width: 992px) {
+    .header__form__btn {
+      width: 160px; } }
 
 .form__info {
   width: 400px;
   height: 30px;
   margin: 0 auto;
   color: #C00000; }
+  @media screen and (max-width: 992px) {
+    .form__info {
+      width: 100%; } }
 
 .benefits__block {
   padding: 14px;
@@ -191,6 +281,10 @@ body {
   margin-bottom: 25px;
   line-height: 18px; }
 
+@media screen and (max-width: 1200px) {
+  .laptop__custom-container {
+    padding: 0 25px; } }
+
 .catalog__block {
   margin-bottom: 70px; }
 
@@ -220,15 +314,34 @@ body {
   margin-bottom: 20px; }
   .product__item:hover {
     box-shadow: 0px 4px 5.34px 0.66px rgba(0, 0, 0, 0.15); }
+  @media screen and (max-width: 768px) {
+    .product__item {
+      margin-left: 100px;
+      margin-right: 100px; } }
+  @media screen and (max-width: 680px) {
+    .product__item {
+      margin-left: 50px;
+      margin-right: 50px; } }
+  @media screen and (max-width: 480px) {
+    .product__item {
+      margin-left: 0;
+      margin-right: 0; } }
 
 .product__item__img {
-  min-height: 175px; }
+  min-height: 175px;
+  overflow: hidden; }
   .product__item__img img {
     max-height: 135px; }
 
 .product__item__name {
   height: 100px;
   overflow: hidden; }
+  @media screen and (max-width: 992px) {
+    .product__item__name {
+      height: 50px; } }
+  @media screen and (max-width: 680px) {
+    .product__item__name {
+      height: 75px; } }
 
 .product__item__name-text {
   font-size: 16px;
@@ -241,7 +354,7 @@ body {
   background-color: #f48fb1;
   box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
   border: none;
-  padding: 5px px;
+  padding: 5px 32px;
   font-size: 16px;
   font-family: "Calibri";
   color: #ffffff; }
@@ -262,6 +375,13 @@ body {
   background: url("../img/sl_ind.png") center 0px no-repeat; }
 .catalog__block__wrap .carousel-indicators li.active {
   background: url("../img/sl_ind.png") center -35px no-repeat; }
+
+.reviews__block {
+  margin-bottom: 50px; }
+
+@media screen and (max-width: 480px) {
+  .reviews__custom-container {
+    padding: 0 5px; } }
 
 .reviews__item__onliner {
   width: 100%;
@@ -285,6 +405,9 @@ body {
   font: 700 25px/29px 'Open Sans',Arial,Helvetica,Verdana,sans-serif;
   margin-bottom: 13px;
   color: #333; }
+  @media screen and (max-width: 480px) {
+    .reviews__item__onliner__title {
+      font-size: 18px; } }
 
 .reviews__item__onliner__stars {
   color: #c60;
@@ -299,6 +422,10 @@ body {
   margin-bottom: 12px;
   color: #333; }
 
+@media screen and (max-width: 480px) {
+  .advantage_custom-container {
+    padding: 0 27px; } }
+
 .advantage__block {
   margin-bottom: 100px; }
 
@@ -310,10 +437,22 @@ body {
 
 .advantage__block__img img {
   margin-bottom: 35px; }
+  @media screen and (max-width: 992px) {
+    .advantage__block__img img {
+      margin-left: 15px;
+      width: 45%;
+      height: auto; } }
+  @media screen and (max-width: 680px) {
+    .advantage__block__img img {
+      width: 100%; } }
 
 .advantage__block__text {
   list-style: none;
   padding-top: 40px; }
+  @media screen and (max-width: 992px) {
+    .advantage__block__text {
+      padding-top: 15px;
+      padding-left: 15px; } }
 
 .advantage__text__item {
   font-size: 16px;
@@ -330,6 +469,10 @@ body {
 .footer__block {
   background: #5fc3df;
   padding: 45px 0 20px 0; }
+  @media screen and (max-width: 768px) {
+    .footer__block {
+      text-align: center;
+      padding: 6px 0 6px 0; } }
 
 .footer__product__name {
   font-family: "Pt_sans_bold";
@@ -340,6 +483,9 @@ body {
 
 .modal__findPrice .modal-dialog {
   width: 450px; }
+  @media screen and (max-width: 768px) {
+    .modal__findPrice .modal-dialog {
+      width: 100%; } }
 .modal__findPrice .modal-content {
   border: 5px solid #8bd7fa;
   border-radius: 120px 104px 138px 144px;
@@ -405,6 +551,9 @@ body {
 
 .modal__gratitude .modal-dialog {
   width: 450px; }
+  @media screen and (max-width: 768px) {
+    .modal__gratitude .modal-dialog {
+      width: 100%; } }
 .modal__gratitude .modal-content {
   border: 5px solid #8bd7fa;
   border-radius: 120px 104px 138px 144px;

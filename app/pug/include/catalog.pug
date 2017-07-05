@@ -1,5 +1,5 @@
 .catalog__block
-    .custom-container
+    .custom-container.laptop__custom-container
         .catalog__block__wrap
             .row
                 .col-xs-12.text-center
@@ -29,7 +29,7 @@
                                     }
 
                                 each item, key in list_product__item_1
-                                    .col-md-3
+                                    .col-md-3.col-sm-6.col-xs-12
                                         .product__item.js_product__item
                                             .product__item__img
                                                 img(src= item alt= key)
@@ -50,13 +50,13 @@
                                     "Подгузники Pampers Premium Care (Mini), 148 шт.":"//opt-485613.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/e57/178_157_1/podguzniki_pampers_premium_care_mini_3_6_kg_148_sht_224566_1.jpg?145942476111865"
                                     }
                                 each item, key in list_product__item_2
-                                    .col-md-3
-                                        .product__item
+                                    .col-md-3.col-sm-6.col-xs-12
+                                        .product__item.js_product__item
                                             .product__item__img
                                                 img(src= item alt= key)
                                             .product__item__name
-                                                p.product__item__name-text= key
-                                            button.product__item__btn(data-toggle='modal', data-target='#myModal')
+                                                p.product__item__name-text.js_product__item__name= key
+                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
                                                 | Узнать цену
                             .item
                                 -
@@ -72,13 +72,13 @@
                                     }
 
                                 each item, key in list_product__item_3
-                                    .col-md-3
-                                        .product__item
+                                    .col-md-3.col-sm-6.col-xs-12
+                                        .product__item.js_product__item
                                             .product__item__img
                                                 img(src= item alt= key)
                                             .product__item__name
-                                                p.product__item__name-text= key
-                                            button.product__item__btn(data-toggle='modal', data-target='#myModal')
+                                                p.product__item__name-text.js_product__item__name= key
+                                            button.product__item__btn.js_bild_modal(data-toggle='modal', data-target='#myModal')
                                                 | Узнать цену
 
                     //a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')

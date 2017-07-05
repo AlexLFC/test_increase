@@ -93,11 +93,9 @@ function readeDocumentForm() {
 
             if(phone === ""){
                 $formInfo.text(messages.error);
-                $('#gratitude').modal('show');
             } else {
                 if(!regexp.test(phone)){
                     $formInfo.text(messages.incorrect);
-                    console.log(messages.incorrect);
                 } else {
                     valid = true;
                     return valid;
@@ -189,7 +187,6 @@ function readeDocumentForm() {
                 if(validPrice){
                     var form = document.forms.findPrice;
                     var formData = new FormData(form);
-                    console.log(formData);
                     $.ajax({
                         type: "POST",
                         url: URLPHPfindPrice,
@@ -222,7 +219,6 @@ function readeDocumentForm() {
             } else {
                 if(!regexp.test(phone)){
                     $formFindPriceInfo.text(messagesPrice.incorrect);
-                    console.log(messagesPrice.incorrect);
                 } else {
                     validPrice = true;
                     return validPrice;

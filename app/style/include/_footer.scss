@@ -1,6 +1,10 @@
 .footer__block{
   background: $catalogNameBG;
   padding: 45px 0 20px 0;
+  @include media_tablets{
+    text-align: center;
+    padding: 6px 0 6px 0;
+  }
 }
 .footer__product__name{
   font-family: $productName;
