@@ -130,12 +130,15 @@ body {
         font-size: 20px;
         line-height: 16px; } }
   .header__main-text .header__main-text_name {
-    font-size: 38px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 48px;
     color: #d64667;
     display: block; }
     @media screen and (max-width: 992px) {
       .header__main-text .header__main-text_name {
-        font-size: 20px; } }
+        font-size: 30px;
+        padding-bottom: 6px; } }
 
 .header__text-stock {
   color: #ffffff;
@@ -145,6 +148,7 @@ body {
   font-family: "Calibri"; }
   @media screen and (max-width: 992px) {
     .header__text-stock {
+      padding: 0 10px;
       font-size: 18px;
       line-height: 17px; } }
 
@@ -228,7 +232,8 @@ body {
   border: none;
   font-family: "Calibri";
   font-size: 16px;
-  font-weight: 700; }
+  font-weight: 700;
+  text-transform: uppercase; }
   @media screen and (max-width: 992px) {
     .header__form__btn {
       width: 160px; } }

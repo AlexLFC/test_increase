@@ -76,11 +76,14 @@
     }
   }
   .header__main-text_name{
-    font-size: 38px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 48px;
     color: $colorName;
     display: block;
     @include media_laptop{
-      font-size: 20px;
+      font-size: 30px;
+      padding-bottom: 6px;
     }
   }
 }
@@ -92,6 +95,7 @@
   line-height: 23px;
   font-family: $secFontFamily;
   @include media_laptop{
+    padding: 0 10px;
     font-size: 18px;
     line-height: 17px;
   }
@@ -179,6 +183,7 @@
   font-family: $secFontFamily;
   font-size: 16px;
   font-weight: 700;
+  text-transform: uppercase;
   @include media_laptop{
     width: 160px;
   }

@@ -12,7 +12,7 @@ if((isset($_POST['userPhone'])&&$_POST['userPhone']!="")){
     $userPhone = strip_tags($userPhone);
 
 //    Проверка номера на правильное написание
-    $pattern = "#^((8|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$#";
+    $pattern = "#\+375\(\d\d\)\d\d\d\-\d\d\-\d\d#";
     if(preg_match($pattern, $userPhone, $out)){
 
         $mail = new PHPMailer;

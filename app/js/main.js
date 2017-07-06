@@ -8,6 +8,12 @@ $(document).ready(readeDocumentForm);
  * messages -Сообщение о результатах отправки письма
  */
 function readeDocumentForm() {
+    /**
+     * Инициализация плагина jquery.maskedinput
+     */
+    $("#userPhone").mask("+375(99)999-99-99");
+    $("#userPhonePrice").mask("+375(99)999-99-99");
+
 
     if($('#sendPhone')){
         var URLPHP = "php/getMailFromSite.php";
@@ -89,7 +95,8 @@ function readeDocumentForm() {
          */
         function customValidation() {
             var phone = $userPhone.val();
-            var regexp = /^((8|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+            var regexp = /\+375\(\d\d\)\d\d\d\-\d\d\-\d\d/;
+            // var regexp = /^((8|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
 
             if(phone === ""){
                 $formInfo.text(messages.error);
@@ -212,7 +219,7 @@ function readeDocumentForm() {
          */
         function customValidationPrice() {
             var phone = $userPhonePrice.val();
-            var regexp = /^((8|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+            var regexp = /\+375\(\d\d\)\d\d\d\-\d\d\-\d\d/;
 
             if(phone === ""){
                 $formFindPriceInfo.text(messagesPrice.error);

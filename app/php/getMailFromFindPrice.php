@@ -15,7 +15,7 @@ if((isset($_POST['userPhonePrice'])&&$_POST['userPhonePrice']!="")){
     $nameProduct = strip_tags($nameProduct);
 //
 //    Проверка номера на правильное написание
-    $pattern = "#^((8|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$#";
+    $pattern = "#\+375\(\d\d\)\d\d\d\-\d\d\-\d\d#";
     if(preg_match($pattern, $userPhonePrice, $out)){
 
         $mail = new PHPMailer;
