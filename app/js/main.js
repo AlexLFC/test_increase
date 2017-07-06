@@ -14,6 +14,8 @@ function readeDocumentForm() {
     $("#userPhone").mask("+375(99)999-99-99");
     $("#userPhonePrice").mask("+375(99)999-99-99");
 
+    $('#myCarousel').carousel({ interval: false });
+
 
     if($('#sendPhone')){
         var URLPHP = "php/getMailFromSite.php";
