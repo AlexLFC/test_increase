@@ -1,0 +1,71 @@
+.top-header__block{
+  padding: 30px 0 30px 0;
+}
+.top-header__logo{
+  text-align: left;
+  @include media_tablets{
+    text-align: center;
+    img{
+      height: 100%;
+      height: auto;
+    }
+  }
+}
+
+.top-header__phone{
+  width: 218px;
+  float: right;
+  text-align: right;
+  padding-left: 35px;
+  background: url("../img/phone.png") no-repeat 37px center;
+  margin-bottom: 10px;
+  @include media_tablets{
+    float: left;
+    }
+  @include media_680{
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+.top-header__phone__item{
+  display: inline-block;
+  font-family: $secFontFamily;
+  font-size: 16px;
+  color: $colorReviewsName;
+  &:hover{
+    cursor: pointer;
+    color: $colorReviewsName;
+    text-decoration: none;
+  }
+}
+.top-header__phone-big{
+  font-weight: 700;
+}
+
+.top-header__phone__btn{
+  border-radius: 3px;
+  background-color: $secondColor;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  padding: 5px 32px;
+  font-size: 16px;
+  font-family: $secFontFamily;
+  color: $mainTextColorL;
+  @include media_desktop{
+    padding: 5px 25px;
+  }
+  @include media_tablets{
+    margin-top: 15px;
+  }
+  &:hover{
+    background-color: $colorHoverBTN;
+  }
+}
+.top-header__phone__button{
+  text-align: right;
+  @include media_680{
+    text-align: center;
+  }
+
+}

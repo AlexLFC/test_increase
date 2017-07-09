@@ -10,6 +10,21 @@
   <body>
     <div class="container">
       <div class="main-container">
+        <div class="top-header__block">
+          <div class="custom-container">
+            <div class="row">
+              <div class="col-md-9 col-sm-8">
+                <div class="top-header__logo"><a href="#"><img src="img/logo_top.png" alt="О здоровье"></a></div>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <div class="top-header__phone"><a class="top-header__phone__item" href="tel:+375172027649">+375 17 <span class="top-header__phone-big">202-76-49</a><a class="top-header__phone__item" href="tel:+375293967649">+375 29 <span class="top-header__phone-big">396-76-49</a><a class="top-header__phone__item" href="tel:+375295467649">+375 17 <span class="top-header__phone-big">546-76-49</a></div>
+                <div class="top-header__phone__button">
+                  <button class="top-header__phone__btn" data-toggle="modal" data-target="#requestCall">Заказать звонок</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <header class="row">
           <div class="col-xs-12">
             <div class="header__wrapper">
@@ -23,19 +38,26 @@
                           <span class="header__main-text_class">премиум класса</span>
                           <span class="header__main-text_name">Pampers</span>
                         </h1>
-                        <h2 class="header__text-stock">Закажите 2 пачки любых подгузников Pampers и получите карту лояльности в подарок!</h2>
+                        <h2 class="header__text-stock">Закажите 2 пачки любых подгузников Pampers<br/> и участвуйте в акции</h2>
                       </div>
                       <div class="header__cont__form">
                         <form class="form-inline form__phone" id="sendPhone">
                           <div class="form-group">
                             <h3 class="header__form__name">
-                              <label for="userPhone">Оставьте Ваши данные и узнайте больше об акции!</label>
+                              <label for="userPhone">
+                                Оствьте Ваши данные и получите подгузники с доставкой на дом<br>
+                                + Карту лояльности в подарок
+                              </label>
                             </h3>
                             <input class="header__form__input" type="text" id="userPhone" name="userPhone" placeholder="Телефон">
-                            <button class="header__form__btn" type="submit">оставить заявку</button>
+                            <button class="header__form__btn" type="submit">Получить подгузники и карту лояльности</button>
                           </div>
                         </form>
                         <div class="form__info js_form__info"></div>
+                        <!--div.header__form__name__cart-->
+                        <!--    p.header__form__name__cart-text-->
+                        <!--        | + Карту лояльности в подарок-->
+                        <!--    img.header__form__name__cart-img(src="img/cart.png")-->
                       </div>
                     </div>
                   </div>
@@ -1164,6 +1186,28 @@
           </div>
         </footer>
         <!-- Modal form-->
+        <div class="modal fade modal__findPrice" id="requestCall" tabindex="-1" role="dialog" aria-labelledby="requestCallLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="requestCallLabel">Оставьте Ваши контактные данные для уточнения стоимости и условий акции</h4>
+              </div>
+              <div class="modal-body">
+                <form id="requestCallForm">
+                  <div class="form-group">
+                    <label for="userPhoneRequest">Номер телефона</label>
+                    <input class="form-control modal__form__input" id="userPhoneRequest" type="text" placeholder="Номер телефона" name="userPhoneRequest">
+                  </div>
+                  <div class="js_form__info__request"></div>
+                  <button class="modal__form__btn" type="submit">оставить заявку</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal-->
+        <!-- Modal form-->
         <div class="modal fade modal__findPrice" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1181,7 +1225,7 @@
                     <input class="modal__form__nameProduct" id="nameProduct" type="text" name="nameProduct">
                   </div>
                   <div class="form__findPrice__info"></div>
-                  <button class="modal__form__btn" type="submit">оставить заявку</button>
+                  <button class="modal__form__btn" type="submit">Оставить заявку</button>
                 </form>
               </div>
             </div>

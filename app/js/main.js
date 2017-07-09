@@ -1,4 +1,16 @@
 $(document).ready(readeDocumentForm);
+$(document).ready(readeStyle);
+
+function readeStyle() {
+/**
+ * Инициализация плагина jquery.maskedinput
+ */
+    $("#userPhone").mask("+375(99)999-99-99");
+    $("#userPhonePrice").mask("+375(99)999-99-99");
+    $("#userPhoneRequest").mask("+375(99)999-99-99");
+}
+
+
 /**
  * Функция для отправки письма на сервер.
  *
@@ -8,11 +20,103 @@ $(document).ready(readeDocumentForm);
  * messages -Сообщение о результатах отправки письма
  */
 function readeDocumentForm() {
-    /**
-     * Инициализация плагина jquery.maskedinput
-     */
-    $("#userPhone").mask("+375(99)999-99-99");
-    $("#userPhonePrice").mask("+375(99)999-99-99");
+
+    if($('#requestCallForm')){
+        var URLPHPRequest = "php/getMailFromReguest.php";
+        var $formPhoneRequest = $('#requestCallForm');
+        var $userPhoneRequest = $('#userPhoneRequest');
+        var $formInfoRequest = $('.js_form__info__request');
+        var messagesReguest = {
+            error : "Введите номер!",
+            incorrect : "Неверно введен номер!",
+            successfull : "Ваша заявка принята, с Вами скоро свяжутся!",
+            errorServer: "Что-то пошло не так! Попробуйте снова.",
+            fullErrorServer: 'Произошла ошибка...'
+        };
+        var flagReguest = true;
+        var validReguest = false;
+
+        $formPhoneRequest.on("submit", function (e) {
+            e.preventDefault();
+            if(flagReguest){//Блокировка повторной отправки формы.
+                customValidationReguest();
+                if(validReguest){
+                    flagReguest = false;
+                    var form = document.forms.requestCallForm;
+                    var formData = new FormData(form);
+                    $.ajax({
+                        type: "POST",
+                        url: URLPHPRequest,
+                        processData: false,
+                        contentType: false,
+                        data: formData,
+                        success: requestSuccessRequest,
+                        error: requestErrorRequest
+                    });
+                }
+            }
+        });
+
+        //Снятие блокировки при корректировки значения
+        $userPhoneRequest.on("focus", function () {
+            flagReguest = true;
+            validReguest = false;
+            $formInfoRequest.text("");
+            return [flagReguest, validReguest];
+        });
+
+        /**
+         * Функция для обработки ответа с сервера.
+         *
+         * error - $formPhone - Значение не получено.
+         * incorrect -  Номер неверный.
+         * successfull - Письмо отправлено.
+         * errorServer - Ошибка на сервере.
+         */
+        function requestSuccessRequest(data) {
+            if(data==="error"){
+                $formInfoRequest.text(messagesReguest.error);
+            } else if (data==="incorrect"){
+                $formInfoRequest.text(messagesReguest.incorrect);
+            } else if (data==="successfull"){
+                $formInfoRequest.text("");
+                $userPhoneRequest.val("");
+                $('#requestCall').modal('hide');
+                $('#gratitude').modal('show');
+            }else {
+                $formInfoRequest.text(messagesReguest.errorServer);
+            };
+        };
+
+        /**
+         * Функция для обработок ошибок.
+         */
+        function requestErrorRequest(xhr, str) {
+            $formInfoRequest.text(messagesReguest.fullErrorServer);
+        };
+
+
+        /**
+         * Функция для валидация формы.
+         */
+        function customValidationReguest() {
+            var phone = $userPhoneRequest.val();
+            var regexp = /\+375\(\d\d\)\d\d\d\-\d\d\-\d\d/;
+            // var regexp = /^((8|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+
+            if(phone === ""){
+                $formInfoRequest.text(messagesReguest.error);
+            } else {
+                if(!regexp.test(phone)){
+                    $formInfoRequest.text(messagesReguest.incorrect);
+                } else {
+                    validReguest = true;
+                    return validReguest;
+                }
+            }
+        };
+    };
+    // **********************************************************
 
     if($('#sendPhone')){
         var URLPHP = "php/getMailFromSite.php";

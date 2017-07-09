@@ -1,4 +1,20 @@
 // Modal form
+#requestCall.modal.fade.modal__findPrice(tabindex='-1', role='dialog', aria-labelledby='requestCallLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                h4#requestCallLabel.modal-title Оставьте Ваши контактные данные для уточнения стоимости и условий акции
+            .modal-body
+                form#requestCallForm
+                    .form-group
+                        label(for='userPhoneRequest') Номер телефона
+                        input.form-control.modal__form__input#userPhoneRequest(type='text', placeholder='Номер телефона' name="userPhoneRequest")
+                    .js_form__info__request
+                    button.modal__form__btn(type='submit') оставить заявку
+// Modal
+// Modal form
 #myModal.modal.fade.modal__findPrice(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
     .modal-dialog(role='document')
         .modal-content
@@ -14,7 +30,7 @@
                     .form-group.modal__form__nameProduct
                         input#nameProduct.modal__form__nameProduct(type='text' name="nameProduct")
                     .form__findPrice__info
-                    button.modal__form__btn(type='submit') оставить заявку
+                    button.modal__form__btn(type='submit') Оставить заявку
 // Modal
 #gratitude.modal.modal__gratitude(tabindex='-1', role='dialog', aria-labelledby='modalgratitudeLabel')
     .modal-dialog(role='document')

@@ -109,7 +109,6 @@
   width: 591px;
   background: url("../img/rectangle.png") no-repeat;
   text-align: center;
-  padding-top: 21px;
   padding-bottom: rem(50px);
   @include media_laptop{
     top: 261px;
@@ -141,9 +140,11 @@
 }
 
 .header__form__name{
+  padding: 0 68px;
+  line-height: 20px;
   color: $mainTextColorL;
   font-size: 23px;
-  margin-bottom: 17px;
+  margin-bottom: 6px;
   font-family: $secFontFamily;
   @include media_laptop{
     font-size: 16px;
@@ -175,15 +176,14 @@
   border-radius: 6px;
   background: $btnFormColor;
   box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
-  width: 223px;
+  width: 290px;
   height: 40px;
   line-height: 40px;
   color: $mainTextColorL;
   border: none;
   font-family: $secFontFamily;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  text-transform: uppercase;
   @include media_laptop{
     width: 160px;
   }
@@ -197,4 +197,16 @@
   @include media_laptop{
     width: 100%;
   }
+}
+.header__form__name__cart{
+  text-align: center;
+  width: 350px;
+  margin: 0 auto;
+  padding-right: 166px;
+  position: relative;
+}
+.header__form__name__cart-img{
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
