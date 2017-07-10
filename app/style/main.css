@@ -39,8 +39,8 @@
 body {
   background: url("../img/BGbody.png");
   font-size: 14px;
-  padding-top: 86px;
-  padding-bottom: 86px; }
+  padding-top: 36px;
+  padding-bottom: 36px; }
   @media screen and (max-width: 992px) {
     body {
       padding-top: 25px;
@@ -60,37 +60,37 @@ body {
     width: 100%; } }
 
 .top-header__block {
-  padding: 30px 0 30px 0; }
+  padding: 10px 0 10px 0; }
+  @media screen and (max-width: 680px) {
+    .top-header__block .custom-container {
+      padding: 0 20px; } }
 
 .top-header__logo {
   text-align: left; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .top-header__logo {
-      text-align: center; }
-      .top-header__logo img {
-        height: 100%;
-        height: auto; } }
+      text-align: center;
+      margin-bottom: 10px; } }
+  .top-header__logo img {
+    width: auto;
+    height: 70px; }
 
 .top-header__phone {
-  width: 218px;
-  float: right;
   text-align: right;
-  padding-left: 35px;
-  background: url("../img/phone.png") no-repeat 37px center;
-  margin-bottom: 10px; }
-  @media screen and (max-width: 768px) {
+  margin-bottom: 12px; }
+  @media screen and (max-width: 480px) {
     .top-header__phone {
-      float: left; } }
-  @media screen and (max-width: 680px) {
-    .top-header__phone {
-      float: none;
-      margin: 0 auto; } }
+      text-align: center; } }
 
 .top-header__phone__item {
-  display: inline-block;
+  padding: 7px 0 10px 55px;
+  background: url("../img/phone.png") no-repeat 10px center;
   font-family: "Calibri";
   font-size: 16px;
   color: #737373; }
+  @media screen and (max-width: 480px) {
+    .top-header__phone__item {
+      padding: 7px 12px 10px 55px; } }
   .top-header__phone__item:hover {
     cursor: pointer;
     color: #737373;
@@ -98,6 +98,12 @@ body {
 
 .top-header__phone-big {
   font-weight: 700; }
+
+.top-header__btn {
+  text-align: right; }
+  @media screen and (max-width: 480px) {
+    .top-header__btn {
+      text-align: center; } }
 
 .top-header__phone__btn {
   border-radius: 3px;
@@ -108,20 +114,12 @@ body {
   font-size: 16px;
   font-family: "Calibri";
   color: #ffffff; }
-  @media screen and (max-width: 1200px) {
-    .top-header__phone__btn {
-      padding: 5px 25px; } }
-  @media screen and (max-width: 768px) {
-    .top-header__phone__btn {
-      margin-top: 15px; } }
   .top-header__phone__btn:hover {
     background-color: #fe6500; }
 
-.top-header__phone__button {
-  text-align: right; }
-  @media screen and (max-width: 680px) {
-    .top-header__phone__button {
-      text-align: center; } }
+@media screen and (max-width: 480px) {
+  .col__phone__12 {
+    width: 100%; } }
 
 .header__wrapper {
   width: 100%;
@@ -438,10 +436,14 @@ body {
   background-color: #f48fb1;
   box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.25);
   border: none;
-  padding: 5px 20px;
-  font-size: 16px;
+  padding: 5px 7px;
+  font-size: 14px;
+  font-weight: 700;
   font-family: "Calibri";
   color: #ffffff; }
+  @media screen and (max-width: 992px) {
+    .product__item__btn {
+      padding: 5px 20px; } }
 
 .product__item:hover .product__item__btn {
   background-color: #fe6500; }
@@ -572,7 +574,7 @@ body {
 
 .footer__block {
   background: #5fc3df;
-  padding: 45px 0 20px 0; }
+  padding: 15px 0 15px 0; }
   @media screen and (max-width: 768px) {
     .footer__block {
       text-align: center;
@@ -583,7 +585,29 @@ body {
   text-transform: uppercase;
   font-size: 36px;
   color: #ffffff;
-  margin-top: 10px; }
+  margin: 15px 0 15px 0; }
+
+.footer__logo_block img {
+  height: 70px;
+  width: auto; }
+
+.footer__phone {
+  text-align: right;
+  margin: 15px 0 15px 0; }
+
+.footer__phone__item {
+  padding: 7px 0 10px 55px;
+  background: url("../img/phoneW.png") no-repeat 10px center;
+  font-family: "Calibri";
+  font-size: 18px;
+  color: #ffffff; }
+  .footer__phone__item:hover {
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none; }
+
+.footer__phone-big {
+  font-weight: 700; }
 
 .modal__findPrice .modal-dialog {
   width: 450px; }

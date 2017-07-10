@@ -10,7 +10,6 @@ function readeStyle() {
     $("#userPhoneRequest").mask("+375(99)999-99-99");
 }
 
-
 /**
  * Функция для отправки письма на сервер.
  *
@@ -20,6 +19,49 @@ function readeStyle() {
  * messages -Сообщение о результатах отправки письма
  */
 function readeDocumentForm() {
+    var PHPURL ={
+        reguestForm: "php/getMailFromReguest.php",
+        sendPhoneForm: "php/getMailFromSite.php",
+        findPriceForm: "php/getMailFromFindPrice.php"
+    };
+    var statusMessage={
+        error : "Введите номер!",
+        incorrect : "Неверно введен номер!",
+        successfull : "Ваша заявка принята, с Вами скоро свяжутся!",
+        errorServer: "Что-то пошло не так! Попробуйте снова.",
+        fullErrorServer: 'Произошла ошибка...'
+    };
+    var regPhone = /\+375\(\d\d\)\d\d\d\-\d\d\-\d\d/;
+
+    /**
+     * customValidationForm функция для валитации данных по регулярному выражению
+     *
+     * @param $input - jquery элемент формы
+     * @param regExpression - регулярное ворожение по которому будет вестись сравнение
+     * @param funError - функции для отображения того что поля пустое
+     * @param funIncorrect - функции для отображения того что поля заполнено некорректно
+     * @param validFlag - флаг валидации
+     * @returns {boolean}
+     */
+    function customValidationForm($input, regExpression, funError, funIncorrect, validFlag) {
+        var _inputVal = $input.val();
+        if(_inputVal === ""){
+            validFlag = false;
+            funError();
+            return validFlag;
+        } else {
+            if(!regExpression.test(_inputVal)){
+                validFlag = false;
+                funIncorrect();
+                return validFlag;
+            } else {
+                validFlag = true;
+                return validFlag;
+            }
+        }
+    };
+
+
 
     if($('#requestCallForm')){
         var URLPHPRequest = "php/getMailFromReguest.php";

@@ -1,6 +1,6 @@
 .footer__block{
   background: $catalogNameBG;
-  padding: 45px 0 20px 0;
+  padding: 15px 0 15px 0;
   @include media_tablets{
     text-align: center;
     padding: 6px 0 6px 0;
@@ -11,5 +11,32 @@
   text-transform: uppercase;
   font-size: 36px;
   color: $mainTextColorL;
-  margin-top: 10px;
+  margin: 15px 0 15px 0;
+}
+
+.footer__logo_block{
+  img{
+    height: 70px;
+    width: auto;
+  }
+}
+.footer__phone{
+  text-align: right;
+  margin: 15px 0 15px 0;
+}
+
+.footer__phone__item{
+  padding: 7px 0 10px 55px;
+  background: url("../img/phoneW.png") no-repeat 10px center;
+  font-family: $secFontFamily;
+  font-size: 18px;
+  color: $mainTextColorL;
+  &:hover{
+    cursor: pointer;
+    color: $mainTextColorL;
+    text-decoration: none;
+  }
+}
+.footer__phone-big{
+  font-weight: 700;
 }
