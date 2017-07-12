@@ -40,226 +40,197 @@ function readeDocumentForm() {
      * @param regExpression - регулярное ворожение по которому будет вестись сравнение
      * @param funError - функции для отображения того что поля пустое
      * @param funIncorrect - функции для отображения того что поля заполнено некорректно
-     * @param validFlag - флаг валидации
      * @returns {boolean}
      */
-    function customValidationForm($input, regExpression, funError, funIncorrect, validFlag) {
+    function customValidationForm($input, regExpression, funError, funIncorrect) {
         var _inputVal = $input.val();
         if(_inputVal === ""){
-            validFlag = false;
             funError();
-            return validFlag;
+            return false;
         } else {
             if(!regExpression.test(_inputVal)){
-                validFlag = false;
                 funIncorrect();
-                return validFlag;
+                return false;
             } else {
-                validFlag = true;
-                return validFlag;
+                return true;
             }
         }
     };
 
 
+    /**
+     *
+     * @param $block
+     * @param stringStatusMessage
+     * @returns {_logStatusMessage}
+     */
+    function logStatusMessage($block, stringStatusMessage) {
+        function _logStatusMessage() {
+            $block.text(stringStatusMessage);
+        };
+        return _logStatusMessage;
+    };
 
-    if($('#requestCallForm')){
-        var URLPHPRequest = "php/getMailFromReguest.php";
+    /**
+     *
+     * @param formData
+     * @param URLphpFile
+     */
+    function ajaxReguest(
+        formData,
+        URLphpFile,
+        $blockInfo,
+        blockStatusMessage,
+        $formInput,
+        $openGratitude,
+        $closeCurentModal) {
+        $.ajax({
+            type: "POST",
+            url: URLphpFile,
+            processData: false,
+            contentType: false,
+            data: formData,
+            success: serverSuccess($blockInfo, blockStatusMessage, $formInput, $openGratitude, $closeCurentModal),
+            error: serverError($blockInfo, blockStatusMessage)
+        });
+    };
+
+
+    /**
+     *
+     * @param $blockInfo
+     * @param blockStatusMessage
+     * @param $formInput
+     * @param $openGratitude
+     * @param $closeCurentModal
+     * @returns {_serverSuccess}
+     */
+    function serverSuccess($blockInfo, blockStatusMessage, $formInput, $openGratitude, $closeCurentModal) {
+        function _serverSuccess(data) {
+            if(data==="error"){
+                logStatusMessage($blockInfo, blockStatusMessage.error)();
+            } else if (data==="incorrect"){
+                logStatusMessage($blockInfo, blockStatusMessage.incorrect)();
+            } else if (data==="successfull"){
+                logStatusMessage($blockInfo, '')();
+                clearForm($formInput);
+                if(!!$closeCurentModal){
+                    $closeCurentModal.modal('hide');
+                    $openGratitude.modal('show');
+                }else {
+                    $openGratitude.modal('show');
+                }
+            }else {
+                logStatusMessage($blockInfo, blockStatusMessage.errorServer)();
+            };
+        };
+        return _serverSuccess;
+    };
+
+    /**
+     *
+     * @param $blockInfo
+     * @param blockStatusMessage
+     * @returns {_serrError}
+     */
+    function serverError($blockInfo, blockStatusMessage) {
+        function _serrError(xhr, str){
+            logStatusMessage($blockInfo, blockStatusMessage.fullErrorServer)();
+        };
+        return _serrError;
+    };
+
+    /**
+     *
+     * @param $formInput
+     */
+    function clearForm($formInput) {
+        $formInput.val("");
+    };
+
+    /**
+     *
+     * @param $bloclLister
+     * @param $blockInfo
+     */
+    function unlockForm($bloclLister, $blockInfo) {
+        $bloclLister.on("focus", function () {
+            logStatusMessage($blockInfo, '')();
+        });
+    }
+
+
+    if('#requestCallForm'){
         var $formPhoneRequest = $('#requestCallForm');
         var $userPhoneRequest = $('#userPhoneRequest');
         var $formInfoRequest = $('.js_form__info__request');
-        var messagesReguest = {
-            error : "Введите номер!",
-            incorrect : "Неверно введен номер!",
-            successfull : "Ваша заявка принята, с Вами скоро свяжутся!",
-            errorServer: "Что-то пошло не так! Попробуйте снова.",
-            fullErrorServer: 'Произошла ошибка...'
-        };
-        var flagReguest = true;
-        var validReguest = false;
+        var $curentModelRequest = $('#requestCall');
+        var $openModalRequest = $('#gratitude');
 
         $formPhoneRequest.on("submit", function (e) {
+
             e.preventDefault();
-            if(flagReguest){//Блокировка повторной отправки формы.
-                customValidationReguest();
-                if(validReguest){
-                    flagReguest = false;
-                    var form = document.forms.requestCallForm;
-                    var formData = new FormData(form);
-                    $.ajax({
-                        type: "POST",
-                        url: URLPHPRequest,
-                        processData: false,
-                        contentType: false,
-                        data: formData,
-                        success: requestSuccessRequest,
-                        error: requestErrorRequest
-                    });
-                }
-            }
-        });
-
-        //Снятие блокировки при корректировки значения
-        $userPhoneRequest.on("focus", function () {
-            flagReguest = true;
-            validReguest = false;
-            $formInfoRequest.text("");
-            return [flagReguest, validReguest];
-        });
-
-        /**
-         * Функция для обработки ответа с сервера.
-         *
-         * error - $formPhone - Значение не получено.
-         * incorrect -  Номер неверный.
-         * successfull - Письмо отправлено.
-         * errorServer - Ошибка на сервере.
-         */
-        function requestSuccessRequest(data) {
-            if(data==="error"){
-                $formInfoRequest.text(messagesReguest.error);
-            } else if (data==="incorrect"){
-                $formInfoRequest.text(messagesReguest.incorrect);
-            } else if (data==="successfull"){
-                $formInfoRequest.text("");
-                $userPhoneRequest.val("");
-                $('#requestCall').modal('hide');
-                $('#gratitude').modal('show');
-            }else {
-                $formInfoRequest.text(messagesReguest.errorServer);
+            if(customValidationForm(
+                    $userPhoneRequest,
+                    regPhone,
+                    logStatusMessage($formInfoRequest, statusMessage.error),
+                    logStatusMessage($formInfoRequest, statusMessage.incorrect)
+                )){
+                var form = document.forms.requestCallForm;
+                var formData = new FormData(form);
+                ajaxReguest(
+                    formData,
+                    PHPURL.reguestForm,
+                    $formInfoRequest,
+                    statusMessage,
+                    $userPhoneRequest,
+                    $openModalRequest,
+                    $curentModelRequest
+                );
             };
-        };
-
-        /**
-         * Функция для обработок ошибок.
-         */
-        function requestErrorRequest(xhr, str) {
-            $formInfoRequest.text(messagesReguest.fullErrorServer);
-        };
-
-
-        /**
-         * Функция для валидация формы.
-         */
-        function customValidationReguest() {
-            var phone = $userPhoneRequest.val();
-            var regexp = /\+375\(\d\d\)\d\d\d\-\d\d\-\d\d/;
-            // var regexp = /^((8|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-
-            if(phone === ""){
-                $formInfoRequest.text(messagesReguest.error);
-            } else {
-                if(!regexp.test(phone)){
-                    $formInfoRequest.text(messagesReguest.incorrect);
-                } else {
-                    validReguest = true;
-                    return validReguest;
-                }
-            }
-        };
+        });
+        unlockForm($userPhoneRequest, $formInfoRequest);
     };
-    // **********************************************************
 
-    if($('#sendPhone')){
-        var URLPHP = "php/getMailFromSite.php";
+
+    if('#sendPhone'){
         var $formPhone = $('#sendPhone');
         var $userPhone = $('#userPhone');
         var $formInfo = $('.js_form__info');
-        var messages = {
-            error : "Введите номер!",
-            incorrect : "Неверно введен номер!",
-            successfull : "Ваша заявка принята, с Вами скоро свяжутся!",
-            errorServer: "Что-то пошло не так! Попробуйте снова.",
-            fullErrorServer: 'Произошла ошибка...'
-        };
-        var flag = true;
-        var valid = false;
+        var $openModal = $('#gratitude');
 
         $formPhone.on("submit", function (e) {
+
             e.preventDefault();
-            if(flag){//Блокировка повторной отправки формы.
-                customValidation();
-                if(valid){
-                    flag = false;
-                    var form = document.forms.sendPhone;
-                    var formData = new FormData(form);
-                    $.ajax({
-                        type: "POST",
-                        url: URLPHP,
-                        processData: false,
-                        contentType: false,
-                        data: formData,
-                        success: requestSuccess,
-                        error: requestError
-                    });
-                }
-            }
-        });
-
-        //Снятие блокировки при корректировки значения
-        $userPhone.on("focus", function () {
-            flag = true;
-            valid = false;
-            $formInfo.text("");
-            return [flag, valid];
-        });
-
-        /**
-         * Функция для обработки ответа с сервера.
-         *
-         * error - $formPhone - Значение не получено.
-         * incorrect -  Номер неверный.
-         * successfull - Письмо отправлено.
-         * errorServer - Ошибка на сервере.
-         */
-        function requestSuccess(data) {
-            if(data==="error"){
-                $formInfo.text(messages.error);
-            } else if (data==="incorrect"){
-                $formInfo.text(messages.incorrect);
-            } else if (data==="successfull"){
-                $formInfo.text("");
-                $userPhone.val("");
-                $('#myModal').modal('hide');
-                $('#gratitude').modal('show');
-            }else {
-                $formInfo.text(messages.errorServer);
+            if(customValidationForm(
+                    $userPhone,
+                    regPhone,
+                    logStatusMessage($formInfo, statusMessage.error),
+                    logStatusMessage($formInfo, statusMessage.incorrect)
+                )){
+                var form = document.forms.sendPhone;
+                var formData = new FormData(form);
+                ajaxReguest(
+                    formData,
+                    PHPURL.sendPhoneForm,
+                    $formInfo,
+                    statusMessage,
+                    $userPhone,
+                    $openModal,
+                    false
+                );
             };
-        };
-
-        /**
-         * Функция для обработок ошибок.
-         */
-        function requestError(xhr, str) {
-            $formInfo.text(messages.fullErrorServer);
-        };
-
-
-        /**
-         * Функция для валидация формы.
-         */
-        function customValidation() {
-            var phone = $userPhone.val();
-            var regexp = /\+375\(\d\d\)\d\d\d\-\d\d\-\d\d/;
-            // var regexp = /^((8|\+375)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-
-            if(phone === ""){
-                $formInfo.text(messages.error);
-            } else {
-                if(!regexp.test(phone)){
-                    $formInfo.text(messages.incorrect);
-                } else {
-                    valid = true;
-                    return valid;
-                }
-            }
-        };
+        });
+        unlockForm($userPhone, $formInfo);
     };
-    // ************************************************************
-    // ********Отправка писем с формы
-    // ************************************************************
 
-    if($("#findPrice")){
+    if('#findPrice'){
+        var $formPrice = $('#findPrice');
+        var $userPhonePrice = $('#userPhonePrice');
+        var $formFindPriceInfo = $('.form__findPrice__info');
+        var $curentModelPrice = $('#myModal');
+        var $openModalPrice = $('#gratitude');
+
         /**
          * Для перемещения названия продукта в форму.
          */
@@ -276,107 +247,29 @@ function readeDocumentForm() {
             $selectedProduct={};
         });
 
-        /**
-         * Функция для отправки письма на сервер.
-         *
-         * $formPrice - jquery элемент по id формы.
-         * $formFindPriceInfo - jquery элемент Блок для вывода информации
-         * URLPHPfindPrice - Путь до php файла.
-         * messages -Сообщение о результатах отправки письма
-         */
-
-        var $formPrice = $("#findPrice");
-        var URLPHPfindPrice = "php/getMailFromFindPrice.php";
-        var $formFindPriceInfo = $(".form__findPrice__info");
-        var $userPhonePrice = $("#userPhonePrice");
-        var messagesPrice= {
-            error : "Введите номер!",
-            incorrect : "Неверно введен номер!",
-            successfull : "Ваша заявка принята, с Вами скоро свяжутся!",
-            errorServer: "Что-то пошло не так! Попробуйте снова.",
-            fullErrorServer: 'Произошла ошибка...'
-        };
-        var flagPrice = true;
-        var validPrice = false;
-
-        /**
-         * Функция для обработки ответа с сервера.
-         *
-         * error - $formPhone - Значение не получено.
-         * incorrect -  Номер неверный.
-         * successfull - Письмо отправлено.
-         * errorServer - Ошибка на сервере.
-         */
-        function requestSuccessPrice(data) {
-            if(data==="error"){
-                $formFindPriceInfo.text(messagesPrice.error);
-            } else if (data==="incorrect"){
-                $formFindPriceInfo.text(messagesPrice.incorrect);
-            } else if (data==="successfull"){
-                $formFindPriceInfo.text("");
-                $userPhone.val("");
-                $('#myModal').modal('hide');
-                $('#gratitude').modal('show');
-            }else {
-                $formInfo.text(messagesPrice.errorServer);
-            };
-        };
-
-
-        /**
-         * Функция для обработок ошибок.
-         */
-        function requestErrorPrice(xhr, str) {
-            $formFindPriceInfo.text(messagesPrice.fullErrorServer);
-        };
-
 
         $formPrice.on("submit", function (e) {
             e.preventDefault();
-            if(flagPrice){
-                flagPrice = false;
-                customValidationPrice();
-                if(validPrice){
-                    var form = document.forms.findPrice;
-                    var formData = new FormData(form);
-                    $.ajax({
-                        type: "POST",
-                        url: URLPHPfindPrice,
-                        processData: false,
-                        contentType: false,
-                        data: formData,
-                        success: requestSuccessPrice,
-                        error: requestErrorPrice
-                    });
-                }
-            }
+            if(customValidationForm(
+                    $userPhonePrice,
+                    regPhone,
+                    logStatusMessage($formFindPriceInfo, statusMessage.error),
+                    logStatusMessage($formFindPriceInfo, statusMessage.incorrect)
+                )){
+                var form = document.forms.findPrice;
+                var formData = new FormData(form);
+                ajaxReguest(
+                    formData,
+                    PHPURL.findPriceForm,
+                    $formFindPriceInfo,
+                    statusMessage,
+                    $userPhonePrice,
+                    $openModalPrice,
+                    $curentModelPrice
+                );
+            };
         });
-
-        //Снятие блокировки при корректировки значения
-        $userPhonePrice.on("focus", function () {
-            flagPrice = true;
-            validPrice = false;
-            $formFindPriceInfo.text("");
-            return [flagPrice, validPrice];
-        });
-        /**
-         * Функция для валидация формы.
-         */
-        function customValidationPrice() {
-            var phone = $userPhonePrice.val();
-            var regexp = /\+375\(\d\d\)\d\d\d\-\d\d\-\d\d/;
-
-            if(phone === ""){
-                $formFindPriceInfo.text(messagesPrice.error);
-            } else {
-                if(!regexp.test(phone)){
-                    $formFindPriceInfo.text(messagesPrice.incorrect);
-                } else {
-                    validPrice = true;
-                    return validPrice;
-                }
-            }
-        };
+        unlockForm($userPhonePrice, $formFindPriceInfo);
     };
 };
 
