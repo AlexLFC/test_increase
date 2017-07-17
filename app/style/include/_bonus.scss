@@ -1,0 +1,42 @@
+.bonus__block{
+  margin-bottom: 30px;
+  text-align: center;
+  @include media_desktop{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  @include  media_laptop{
+    img{
+      width: 200px;
+      height: auto;
+    }
+  }
+  @include  media_phones{
+    img{
+      width: 100%;
+      height: auto;
+    }
+    .custom-container{
+      padding: 0 15px;
+    }
+  }
+}
+.bonus__list{
+  list-style: none;
+}
+.bonus__item{
+  margin-bottom: 15px;
+}
+.bonus__item__img{
+  margin-bottom: 15px;
+}
+.bonus__item__name{
+  font-size: 18px;
+  font-weight: 700;
+  font-family: $secFontFamily;
+  color: $colorNameProd;
+  margin-bottom: 16px;
+  line-height: 19px;
+}

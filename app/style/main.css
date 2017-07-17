@@ -390,6 +390,38 @@ body {
   margin-bottom: 25px;
   line-height: 18px; }
 
+.bonus__block {
+  margin-bottom: 30px;
+  text-align: center; }
+  @media screen and (max-width: 1200px) {
+    .bonus__block img {
+      width: 100%;
+      height: auto; } }
+  @media screen and (max-width: 992px) {
+    .bonus__block img {
+      width: 200px;
+      height: auto; } }
+  @media screen and (max-width: 480px) {
+    .bonus__block .custom-container {
+      padding: 0 15px; } }
+
+.bonus__list {
+  list-style: none; }
+
+.bonus__item {
+  margin-bottom: 15px; }
+
+.bonus__item__img {
+  margin-bottom: 15px; }
+
+.bonus__item__name {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Calibri";
+  color: #456a9d;
+  margin-bottom: 16px;
+  line-height: 19px; }
+
 @media screen and (max-width: 1200px) {
   .laptop__custom-container {
     padding: 0 25px; } }
