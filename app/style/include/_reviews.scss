@@ -1,9 +1,39 @@
+#temp{
+  //background: url("../img/123.png") no-repeat;
+  //height: 150px;
+}
+
 .reviews__block{
   margin-bottom: 50px;
 }
 .reviews__custom-container{
   @include media_phones{
     padding: 0 5px;
+  }
+}
+.reviews__name__mag__onliner{
+  font: 40px/45px 'Open Sans Condensed',franklingothicmedicondcRg,Arial,Helvetica,Verdana,sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+  margin-top: 6px;
+  color: #333;
+  font-weight: 700;
+  padding-right: 98px;
+  background: url(../img/giz.gif) no-repeat right 8px;
+}
+.reviews__name__stars__onliner{
+  display: inline-block;
+  height: 20px;
+  width: 130px;
+  margin-bottom: -5px;
+  background: url(../img/stars.png) no-repeat 2px -5px;
+}
+.reviews__name__link__onliner{
+  border-bottom: 1px dotted;
+  &:hover{
+    color: #06c;
+    text-decoration: none;
   }
 }
 .reviews__item__onliner{
