@@ -193,7 +193,8 @@
   width: 400px;
   height: 30px;
   margin: 0 auto;
-  color: $colorError;
+  font-size: 18px;
+  color: $mainTextColorL;
   @include media_laptop{
     width: 100%;
   }

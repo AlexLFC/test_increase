@@ -31,6 +31,7 @@ function readeDocumentForm() {
         errorServer: "Что-то пошло не так! Попробуйте снова.",
         fullErrorServer: 'Произошла ошибка...'
     };
+    var textBlock = "*Количество карт по акции ограничено";
     var regPhone = /\+375\(\d\d\)\d\d\d\-\d\d\-\d\d/;
 
     /**
@@ -153,9 +154,16 @@ function readeDocumentForm() {
      * @param $bloclLister
      * @param $blockInfo
      */
-    function unlockForm($bloclLister, $blockInfo) {
+    function unlockForm($bloclLister, $blockInfo, oldTextBlock) {
         $bloclLister.on("focus", function () {
-            logStatusMessage($blockInfo, '')();
+            if(!!oldTextBlock){
+                logStatusMessage($blockInfo, oldTextBlock)();
+                console.log("oldTextBlock");
+            } else {
+                logStatusMessage($blockInfo, '')();
+                console.log("not oldTextBlock");
+            }
+
         });
     }
 
@@ -189,7 +197,7 @@ function readeDocumentForm() {
                 );
             };
         });
-        unlockForm($userPhoneRequest, $formInfoRequest);
+        unlockForm($userPhoneRequest, $formInfoRequest, false);
     };
 
 
@@ -221,7 +229,7 @@ function readeDocumentForm() {
                 );
             };
         });
-        unlockForm($userPhone, $formInfo);
+        unlockForm($userPhone, $formInfo, textBlock);
     };
 
     if('#findPrice'){
@@ -269,7 +277,7 @@ function readeDocumentForm() {
                 );
             };
         });
-        unlockForm($userPhonePrice, $formFindPriceInfo);
+        unlockForm($userPhonePrice, $formFindPriceInfo, false);
     };
 };
 

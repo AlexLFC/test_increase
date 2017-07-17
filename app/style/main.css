@@ -333,7 +333,8 @@ body {
   width: 400px;
   height: 30px;
   margin: 0 auto;
-  color: #C00000; }
+  font-size: 18px;
+  color: #ffffff; }
   @media screen and (max-width: 992px) {
     .form__info {
       width: 100%; } }
