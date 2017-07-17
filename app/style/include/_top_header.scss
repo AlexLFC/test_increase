@@ -17,6 +17,36 @@
     height: 70px;
   }
 }
+.top-header__title{
+  font-family: $secFontFamily;
+  font-size: 30px;
+  color: $advantageTextColor;
+  margin: 8px 0 0 -15px;
+  @include media_desktop{
+    margin: 8px 0 0 15px;
+  }
+  @include media_680{
+    margin: 0 0 0 25px;
+    font-size: 25px;
+  }
+}
+
+.top-header__subtitle{
+  font-family: $secFontFamily;
+  font-size: 18px;
+  margin: 9px 0px 0 -30px;
+  color: $advantageTextColor;
+  @include media_desktop{
+    margin: 9px 0px 0 -20px;
+  }
+  @include  media_850{
+    margin: 9px 0 0 15px;
+  }
+  @include media_680{
+    margin: 10px 0 0 25px;
+    font-size: 14px;
+  }
+}
 .top-header__phone{
   text-align: right;
   margin-bottom: 12px;

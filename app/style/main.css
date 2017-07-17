@@ -75,6 +75,35 @@ body {
     width: auto;
     height: 70px; }
 
+.top-header__title {
+  font-family: "Calibri";
+  font-size: 30px;
+  color: #484848;
+  margin: 8px 0 0 -15px; }
+  @media screen and (max-width: 1200px) {
+    .top-header__title {
+      margin: 8px 0 0 15px; } }
+  @media screen and (max-width: 680px) {
+    .top-header__title {
+      margin: 0 0 0 25px;
+      font-size: 25px; } }
+
+.top-header__subtitle {
+  font-family: "Calibri";
+  font-size: 18px;
+  margin: 9px 0px 0 -30px;
+  color: #484848; }
+  @media screen and (max-width: 1200px) {
+    .top-header__subtitle {
+      margin: 9px 0px 0 -20px; } }
+  @media screen and (max-width: 850px) {
+    .top-header__subtitle {
+      margin: 9px 0 0 15px; } }
+  @media screen and (max-width: 680px) {
+    .top-header__subtitle {
+      margin: 10px 0 0 25px;
+      font-size: 14px; } }
+
 .top-header__phone {
   text-align: right;
   margin-bottom: 12px; }
