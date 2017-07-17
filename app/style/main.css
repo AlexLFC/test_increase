@@ -602,6 +602,16 @@ body {
 .advantage__item__name {
   font-weight: 700; }
 
+footer .top-header__title {
+  color: #ffffff; }
+footer .top-header__subtitle {
+  color: #ffffff; }
+footer .top-header__phone__item {
+  color: #ffffff;
+  background: url(../img/phoneW.png) no-repeat 10px center; }
+  footer .top-header__phone__item:hover {
+    color: #ffffff; }
+
 .footer__block {
   background: #5fc3df;
   padding: 15px 0 15px 0; }

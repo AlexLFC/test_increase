@@ -1,3 +1,21 @@
+footer{
+  .top-header__title{
+    color: $mainTextColorL;
+  }
+  .top-header__subtitle{
+    color: $mainTextColorL;
+  }
+  .top-header__phone__item{
+    color: $mainTextColorL;
+    background: url(../img/phoneW.png) no-repeat 10px center;
+    &:hover{
+      color: $mainTextColorL;
+    }
+  }
+}
+
+
+
 .footer__block{
   background: $catalogNameBG;
   padding: 15px 0 15px 0;
