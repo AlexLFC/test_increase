@@ -205,7 +205,7 @@ body {
 
 .header__main-text {
   color: #ffffff;
-  font-size: 50px;
+  font-size: 35px;
   padding-top: 18px;
   font-family: "HelveticaNeueCyr-Medium"; }
   @media screen and (max-width: 992px) {
@@ -402,6 +402,9 @@ body {
       width: 200px;
       height: auto; } }
   @media screen and (max-width: 480px) {
+    .bonus__block img {
+      width: 100%;
+      height: auto; }
     .bonus__block .custom-container {
       padding: 0 15px; } }
 
