@@ -14,14 +14,13 @@ footer{
   }
 }
 
-
-
 .footer__block{
   background: $catalogNameBG;
   padding: 15px 0 15px 0;
-  @include media_tablets{
-    text-align: center;
-    padding: 6px 0 6px 0;
+  @include media_680{
+    .custom-container{
+      padding: 0 15px;
+    }
   }
 }
 .footer__product__name{

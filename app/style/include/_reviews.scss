@@ -1,6 +1,7 @@
-#temp{
-  //background: url("../img/123.png") no-repeat;
-  //height: 150px;
+.reviews__name__mag__block{
+  @include media_phones{
+    padding: 0 15px;
+  }
 }
 
 .reviews__block{
@@ -21,6 +22,12 @@
   font-weight: 700;
   padding-right: 98px;
   background: url(../img/giz.gif) no-repeat right 8px;
+  @include media_680{
+    margin-right: 125px;
+  }
+  @include  media_phones{
+    margin-right: 14px;
+  }
 }
 .reviews__name__stars__onliner{
   display: inline-block;

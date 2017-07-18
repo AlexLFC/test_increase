@@ -4,6 +4,9 @@
   height: 470px;
   background: url("../img/HeaderIMG1.jpg");
   background-size: cover;
+  @include  media_desktop{
+    background: url("../img/HeaderIMG1.jpg") -65px -11px no-repeat;
+  }
   @include media_850{
     background: url("../img/HeaderIMG1.jpg") -65px -75px no-repeat;
   }
@@ -17,10 +20,13 @@
   position: relative;
   margin-bottom: 144px;
   @include media_laptop{
-    margin-bottom: 40px;
+    margin-bottom: 70px;
+  }
+  @include media_tablets{
+    margin-bottom: 100px;
   }
   @include media_680{
-    margin-bottom: 150px;
+    margin-bottom: 220px;
   }
   @include media_phones{
     margin-bottom: 350px;
@@ -63,7 +69,7 @@
   padding-top: 18px;
   font-family: $mailFontFamily;
   @include media_laptop{
-    font-size: 35px;
+    font-size: 23px;
   }
   .header__main-text_class{
     font-size: 38px;
@@ -114,7 +120,7 @@
     top: 261px;
     right: 30px;
     width: 420px;
-    background-size: 420px 180px;
+    background-size: 420px 250px;
   }
   @include media_tablets{
     top: 300px;
@@ -124,12 +130,15 @@
     top: 412px;
   }
   @include media_phones{
-    top: 500px;
+    top: 515px;
     width: 300px;
     background-size: 300px 260px;
   }
   .form-inline{
     margin-bottom: 10px;
+    @include media_phones{
+      margin-bottom: -10px;
+    }
   }
 }
 .form__phone{
@@ -147,7 +156,13 @@
   margin-bottom: 6px;
   font-family: $secFontFamily;
   @include media_laptop{
-    font-size: 16px;
+    font-size: 19px;
+  }
+  @include media_phones{
+    font-size: 17px;
+    line-height: 17px;
+    padding: 0 16px;
+    margin-top: 25px;
   }
 }
 
@@ -164,7 +179,9 @@
   &:-moz-placeholder           {color:#000000;}/* Firefox 18- */
   &:-ms-input-placeholder      {color:#000000;}
   @include media_laptop{
-    width: 160px;
+    display: block;
+    margin: 10px auto;
+    width: 70%;
   }
   @include media_phones{
     display: block;
@@ -185,7 +202,13 @@
   font-size: 15px;
   font-weight: 700;
   @include media_laptop{
-    width: 160px;
+    display: block;
+    margin: 10px auto;
+    width: 70%;
+  }
+  @include media_phones{
+    height: auto;
+    line-height: 18px;
   }
 }
 
@@ -197,6 +220,13 @@
   color: $mainTextColorL;
   @include media_laptop{
     width: 100%;
+  }
+  @include media_phones{
+    height: auto;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: -5px;
   }
 }
 .header__form__name__cart{

@@ -1,6 +1,16 @@
 .benefits__block{
   padding: 14px;
   text-align: center;
+  @include media_680{
+    .custom-container{
+      padding: 0 50px;
+    }
+  }
+  @include media_phones{
+    .custom-container{
+      padding: 0 15px;
+    }
+  }
 }
 
 .benefits__list{

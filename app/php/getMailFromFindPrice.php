@@ -5,6 +5,7 @@ if((isset($_POST['userPhonePrice'])&&$_POST['userPhonePrice']!="")){
     $userPhonePrice = $_POST['userPhonePrice'];
     $nameProduct = $_POST['nameProduct'];
     $emailSite = "giz@giz.by";
+    $emailIncrease = "info@increase.by";
     $addressServer = "test@test.by";
 
 //    Удаляет пробелы (или другие символы) из начала и конца строки
@@ -22,12 +23,14 @@ if((isset($_POST['userPhonePrice'])&&$_POST['userPhonePrice']!="")){
 
         //Формирование текста письма
         $bodyHtml = '
+            <p></p>
             <p>Телефон: '.$userPhonePrice.'</p>
             <p>Название: '.$nameProduct.'</p>
             ';
 
-        $mail->setFrom($addressServer, "Новая заявка");
+        $mail->setFrom($addressServer, "podgyzniki@giz.by");
         $mail->addAddress($emailSite, "giz@giz.by");
+        $mail->addAddress($emailIncrease,"info@increase.by");
         $mail->isHTML(true);
 
         $mail->Subject = "Тема";

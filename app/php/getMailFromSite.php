@@ -4,6 +4,7 @@ if((isset($_POST['userPhone'])&&$_POST['userPhone']!="")){
     require_once ("PHPMailer-master/PHPMailerAutoload.php");
     $userPhone = $_POST['userPhone'];
     $emailSite = "giz@giz.by";
+    $emailIncrease = "info@increase.by";
     $addressServer = "test@test.by";
 
 //    Удаляет пробелы (или другие символы) из начала и конца строки
@@ -20,8 +21,9 @@ if((isset($_POST['userPhone'])&&$_POST['userPhone']!="")){
         //Формирование текста письма
         $bodyHtml = '<p>Номер телефона: '.$userPhone.'</p>';
 
-        $mail->setFrom($addressServer, "Новая заявка");
+        $mail->setFrom($addressServer, "podgyzniki@giz.by");
         $mail->addAddress($emailSite, "giz@giz.by");
+        $mail->addAddress($emailIncrease,"info@increase.by");
         $mail->isHTML(true);
 
         $mail->Subject = "Тема";

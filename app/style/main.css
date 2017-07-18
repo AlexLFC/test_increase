@@ -155,6 +155,9 @@ body {
   height: 470px;
   background: url("../img/HeaderIMG1.jpg");
   background-size: cover; }
+  @media screen and (max-width: 1200px) {
+    .header__wrapper {
+      background: url("../img/HeaderIMG1.jpg") -65px -11px no-repeat; } }
   @media screen and (max-width: 850px) {
     .header__wrapper {
       background: url("../img/HeaderIMG1.jpg") -65px -75px no-repeat; } }
@@ -167,10 +170,13 @@ body {
   margin-bottom: 144px; }
   @media screen and (max-width: 992px) {
     .header__wrapper {
-      margin-bottom: 40px; } }
+      margin-bottom: 70px; } }
+  @media screen and (max-width: 768px) {
+    .header__wrapper {
+      margin-bottom: 100px; } }
   @media screen and (max-width: 680px) {
     .header__wrapper {
-      margin-bottom: 150px; } }
+      margin-bottom: 220px; } }
   @media screen and (max-width: 480px) {
     .header__wrapper {
       margin-bottom: 350px; } }
@@ -210,7 +216,7 @@ body {
   font-family: "HelveticaNeueCyr-Medium"; }
   @media screen and (max-width: 992px) {
     .header__main-text {
-      font-size: 35px; } }
+      font-size: 23px; } }
   .header__main-text .header__main-text_class {
     font-size: 38px;
     padding-top: 10px;
@@ -256,7 +262,7 @@ body {
       top: 261px;
       right: 30px;
       width: 420px;
-      background-size: 420px 180px; } }
+      background-size: 420px 250px; } }
   @media screen and (max-width: 768px) {
     .header__cont__form {
       top: 300px;
@@ -266,11 +272,14 @@ body {
       top: 412px; } }
   @media screen and (max-width: 480px) {
     .header__cont__form {
-      top: 500px;
+      top: 515px;
       width: 300px;
       background-size: 300px 260px; } }
   .header__cont__form .form-inline {
     margin-bottom: 10px; }
+    @media screen and (max-width: 480px) {
+      .header__cont__form .form-inline {
+        margin-bottom: -10px; } }
 
 @media screen and (max-width: 480px) {
   .form__phone {
@@ -285,7 +294,13 @@ body {
   font-family: "Calibri"; }
   @media screen and (max-width: 992px) {
     .header__form__name {
-      font-size: 16px; } }
+      font-size: 19px; } }
+  @media screen and (max-width: 480px) {
+    .header__form__name {
+      font-size: 17px;
+      line-height: 17px;
+      padding: 0 16px;
+      margin-top: 25px; } }
 
 .header__form__input {
   width: 210px;
@@ -307,7 +322,9 @@ body {
     color: #000000; }
   @media screen and (max-width: 992px) {
     .header__form__input {
-      width: 160px; } }
+      display: block;
+      margin: 10px auto;
+      width: 70%; } }
   @media screen and (max-width: 480px) {
     .header__form__input {
       display: block;
@@ -327,7 +344,13 @@ body {
   font-weight: 700; }
   @media screen and (max-width: 992px) {
     .header__form__btn {
-      width: 160px; } }
+      display: block;
+      margin: 10px auto;
+      width: 70%; } }
+  @media screen and (max-width: 480px) {
+    .header__form__btn {
+      height: auto;
+      line-height: 18px; } }
 
 .form__info {
   width: 400px;
@@ -338,6 +361,13 @@ body {
   @media screen and (max-width: 992px) {
     .form__info {
       width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .form__info {
+      height: auto;
+      font-size: 16px;
+      text-align: center;
+      padding: 0 15px;
+      margin-bottom: -5px; } }
 
 .header__form__name__cart {
   text-align: center;
@@ -354,6 +384,12 @@ body {
 .benefits__block {
   padding: 14px;
   text-align: center; }
+  @media screen and (max-width: 680px) {
+    .benefits__block .custom-container {
+      padding: 0 50px; } }
+  @media screen and (max-width: 480px) {
+    .benefits__block .custom-container {
+      padding: 0 15px; } }
 
 .benefits__list {
   list-style: none; }
@@ -403,7 +439,7 @@ body {
       height: auto; } }
   @media screen and (max-width: 480px) {
     .bonus__block img {
-      width: 100%;
+      width: 70%;
       height: auto; }
     .bonus__block .custom-container {
       padding: 0 15px; } }
@@ -547,6 +583,10 @@ body {
   background: url("../img/rig.png") no-repeat;
   right: -5px; }
 
+@media screen and (max-width: 480px) {
+  .reviews__name__mag__block {
+    padding: 0 15px; } }
+
 .reviews__block {
   margin-bottom: 50px; }
 
@@ -564,6 +604,12 @@ body {
   font-weight: 700;
   padding-right: 98px;
   background: url(../img/giz.gif) no-repeat right 8px; }
+  @media screen and (max-width: 680px) {
+    .reviews__name__mag__onliner {
+      margin-right: 125px; } }
+  @media screen and (max-width: 480px) {
+    .reviews__name__mag__onliner {
+      margin-right: 14px; } }
 
 .reviews__name__stars__onliner {
   display: inline-block;
@@ -674,10 +720,9 @@ footer .top-header__phone__item {
 .footer__block {
   background: #5fc3df;
   padding: 15px 0 15px 0; }
-  @media screen and (max-width: 768px) {
-    .footer__block {
-      text-align: center;
-      padding: 6px 0 6px 0; } }
+  @media screen and (max-width: 680px) {
+    .footer__block .custom-container {
+      padding: 0 15px; } }
 
 .footer__product__name {
   font-family: "Pt_sans_bold";
@@ -712,11 +757,15 @@ footer .top-header__phone__item {
   width: 450px; }
   @media screen and (max-width: 768px) {
     .modal__findPrice .modal-dialog {
-      width: 100%; } }
+      width: 90%;
+      margin: 25px auto; } }
 .modal__findPrice .modal-content {
   border: 5px solid #8bd7fa;
   border-radius: 120px 104px 138px 144px;
   padding: 25px 50px; }
+  @media screen and (max-width: 480px) {
+    .modal__findPrice .modal-content {
+      padding: 10px 10px; } }
 .modal__findPrice .modal-header {
   border-bottom: none;
   color: #484848;
@@ -731,6 +780,9 @@ footer .top-header__phone__item {
     background: url("../img/close.png") center center no-repeat;
     text-shadow: none;
     opacity: 1; }
+    @media screen and (max-width: 480px) {
+      .modal__findPrice .modal-header .close {
+        margin-right: 30px; } }
 
 .modal__form__input {
   width: 100%;
@@ -765,6 +817,9 @@ footer .top-header__phone__item {
   font-weight: 700;
   margin: 0 auto;
   display: block; }
+  @media screen and (max-width: 480px) {
+    .modal__form__btn {
+      width: 60%; } }
 
 .modal__form__nameProduct {
   opacity: 0;
@@ -786,7 +841,8 @@ footer .top-header__phone__item {
   width: 450px; }
   @media screen and (max-width: 768px) {
     .modal__gratitude .modal-dialog {
-      width: 100%; } }
+      width: 90%;
+      margin: 25px auto; } }
 .modal__gratitude .modal-content {
   border: 5px solid #8bd7fa;
   border-radius: 120px 104px 138px 144px;
