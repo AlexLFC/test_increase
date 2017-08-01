@@ -1,0 +1,23 @@
+{
+  "name": "Pampers.local",
+  "homepage": "https://github.com/AlexLFC/test_increase",
+  "authors": [
+    "AlexLFC <biarozkin.a.a@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4",
+    "bootstrap": "v3.3.6",
+    "jquery.maskedinput": "^1.4.1"
+  }
+}
