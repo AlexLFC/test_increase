@@ -1,7 +1,7 @@
 <?php
 //Проверка на пустую форму
 if((isset($_POST['userPhonePrice'])&&$_POST['userPhonePrice']!="")){
-    require_once ("PHPMailer-master/PHPMailerAutoload.php");
+    require_once ('../../vendor/autoload.php');
     $userPhonePrice = $_POST['userPhonePrice'];
     $nameProduct = $_POST['nameProduct'];
     $emailSite = "giz@giz.by";
