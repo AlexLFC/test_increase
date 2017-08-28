@@ -2,7 +2,15 @@ $(document).ready(readeDocumentForm);
 $(document).ready(readeStyle);
 
 function readeStyle() {
-/**
+    $('#myCarousel').carousel({
+        interval: false
+    });
+    $('.selectpicker').selectpicker({
+        style: 'btn-info',
+        size: 4
+    });
+
+    /**
  * Инициализация плагина jquery.maskedinput
  */
     $("#userPhone").mask("+375(99)999-99-99");

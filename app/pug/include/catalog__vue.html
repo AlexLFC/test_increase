@@ -1,0 +1,78 @@
+<div class="catalog__block" id="vue-catalog-app">
+    <div class="custom-container laptop__custom-container">
+        <div class="catalog__block__wrap">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="catalog__name__block">
+                        <h3 class="catalog__name">Каталог</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="title_filter">
+                    <h4>Тип подгузника</h4>
+                </div>
+                <div class="col-sm-6">
+                    <div class="select__block">
+                        <div class="form-group">
+                            <select
+                                    title="ТИП ПОДГУЗНИКОВ"
+                                    multiple="multiple"
+                                    v-model="typeSelect"
+                                    id="selectType"
+                                    class="form-control selectpicker">
+                                <option value="diaper">Подгузники</option>
+                                <option value="panties">Трусики-подгузники</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="buttom__block">
+                        <button v-on:click="selectType" class="buttom__filter">Показать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-xs-12">
+                    <div class="carousel slide" id="myCarousel" data-ride="carousel">
+                        <!-- Indicators-->
+                        <ol class="carousel-indicators">
+                            <li
+                                    v-for="iItem in indicator"
+                                    data-target="#myCarousel"
+                                    :class="{'active':!iItem}"
+                                    v-bind:data-slide-to="iItem">
+                            </li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div v-for="(slide, index) in slideCatalog" v-bind:class="{'active':index==0, 'item': true}">
+                                <div class="col-md-3 col-sm-6 col-xs-12" v-for="itemProduct in slide">
+                                    <div class="product__item js_product__item">
+                                        <div class="product__item__img">
+                                            <img
+                                                    v-bind:src="itemProduct.imgURL"
+                                                    v-bind:alt="itemProduct.name">
+                                        </div>
+                                        <div class="product__item__name">
+                                            <p class="product__item__name-text js_product__item__name">{{itemProduct.name}}</p>
+                                        </div>
+                                        <button class="product__item__btn js_bild_modal" data-toggle="modal" data-target="#myModal">Узнать цену по&nbsp;акции</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="carousel__icon carousel_left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="carousel__icon carousel_right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
